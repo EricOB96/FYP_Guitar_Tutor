@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Guitar_tutor"
+run/main_scene="res://Guitar_Tutor/Scenes/Main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://Guitar_Tutor/Capture_bus.tres"
+driver/enable_input=true
+driver/mix_rate=48000
+
+[autoload]
+
+XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+
+[dotnet]
+
+project/assembly_name="Guitar_tutor"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+vrs/mode=2
+
+[xr]
+
+openxr/enabled=true
+openxr/environment_blend_mode=2
+openxr/foveation_level=1
+openxr/foveation_dynamic=true
+openxr/submit_depth_buffer=true
+shaders/enabled=true
