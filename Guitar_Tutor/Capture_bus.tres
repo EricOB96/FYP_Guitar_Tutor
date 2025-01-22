@@ -26,6 +26,7 @@ ceiling_db = -3.0
 
 [sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_1h11v"]
 resource_name = "Amplify"
+volume_db = 6.0
 
 [resource]
 bus/1/name = &"Capture"

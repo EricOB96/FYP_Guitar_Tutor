@@ -23,5 +23,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Tuner" parent="Player" instance=ExtResource("3_j60s0")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.151904, 0.360168, -0.900278)
-update_rate = 0.05
-smoothing = 0.7
