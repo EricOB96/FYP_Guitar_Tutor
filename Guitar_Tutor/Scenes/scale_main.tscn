@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://1lq8yw7mumpj"]
+
+[ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_r80h3"]
+[ext_resource type="PackedScene" uid="uid://cv0bpodvixyjo" path="res://Guitar_Tutor/Scenes/fret_board.tscn" id="2_64xvu"]
+
+[node name="Scale_main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_r80h3")]
+
+[node name="FretBoard" parent="Player" instance=ExtResource("2_64xvu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.3806e-08, 0, -0.615469)

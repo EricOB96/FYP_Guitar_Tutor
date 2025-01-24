@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv0bpodvixyjo"]
+
+[ext_resource type="PackedScene" uid="uid://c575nkigxug1i" path="res://Guitar_Tutor/Assets/Models/Fretboard.glb" id="1_4awxl"]
+
+[node name="FretBoard" type="Node3D"]
+
+[node name="Fretboard" parent="." instance=ExtResource("1_4awxl")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
