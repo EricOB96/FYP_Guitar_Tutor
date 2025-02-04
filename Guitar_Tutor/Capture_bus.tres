@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=9 format=3 uid="uid://c8fir2pp5ys4b"]
+[gd_resource type="AudioBusLayout" load_steps=10 format=3 uid="uid://c8fir2pp5ys4b"]
 
 [sub_resource type="AudioEffectCapture" id="AudioEffectCapture_2vnpq"]
 resource_name = "Capture"
@@ -27,6 +27,9 @@ ceiling_db = -3.0
 [sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_1h11v"]
 resource_name = "Amplify"
 
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_ccck3"]
+resource_name = "SpectrumAnalyzer"
+
 [resource]
 bus/1/name = &"Capture"
 bus/1/solo = false
@@ -50,3 +53,5 @@ bus/1/effect/6/effect = SubResource("AudioEffectLimiter_h6tqg")
 bus/1/effect/6/enabled = true
 bus/1/effect/7/effect = SubResource("AudioEffectAmplify_1h11v")
 bus/1/effect/7/enabled = true
+bus/1/effect/8/effect = SubResource("AudioEffectSpectrumAnalyzer_ccck3")
+bus/1/effect/8/enabled = false

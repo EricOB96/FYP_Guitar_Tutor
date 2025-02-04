@@ -1,27 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cka30ahile41b"]
+[gd_scene load_steps=4 format=3 uid="uid://cka30ahile41b"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_7yjka"]
+[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_fhfes"]
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="2_k2j77"]
 [ext_resource type="PackedScene" uid="uid://b5v7ffrfvn1qd" path="res://Guitar_Tutor/Scenes/Tuner.tscn" id="3_urhve"]
 
-[sub_resource type="Environment" id="Environment_63day"]
-
 [node name="Tuner_main" type="Node3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
-script = ExtResource("1_7yjka")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_63day")
+script = ExtResource("1_fhfes")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.631962, 0.775, 0, -0.775, 0.631962, 0, 0.562578, 0.145238)
+transform = Transform3D(1, 8.88562e-10, 1.07269e-09, -1.39256e-09, 0.644231, 0.764831, -1.14326e-11, -0.764831, 0.644231, 0, 0.562578, 0.145238)
 shadow_enabled = true
-sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_k2j77")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = null
 
 [node name="Tuner" parent="Player" instance=ExtResource("3_urhve")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.151904, 0.360168, -0.900278)
-update_rate = 0.05
-smoothing = 0.7

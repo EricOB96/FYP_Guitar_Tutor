@@ -1,19 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://da7aipicgamhq"]
+[gd_scene load_steps=2 format=3 uid="uid://da7aipicgamhq"]
 
-[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="1_d40gw"]
-[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="2_21aqw"]
+[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_d86gm"]
 
 [node name="Player" type="XROrigin3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_d86gm")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
 [node name="LeftHandController" type="XRController3D" parent="."]
 tracker = &"left_hand"
 
-[node name="LeftHand" parent="LeftHandController" instance=ExtResource("1_d40gw")]
-
 [node name="RightHandController" type="XRController3D" parent="."]
 tracker = &"right_hand"
-
-[node name="RightHand" parent="RightHandController" instance=ExtResource("2_21aqw")]
