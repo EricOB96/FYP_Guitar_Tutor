@@ -13,3 +13,11 @@ func _process(delta: float) -> void:
 
 func _on_tuner_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Guitar_Tutor/Scenes/Tuner_Main.tscn")
+
+
+func _on_scale_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_chord_button_pressed() -> void:
+	pass # Replace with function body.

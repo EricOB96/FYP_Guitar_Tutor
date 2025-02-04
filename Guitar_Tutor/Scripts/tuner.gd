@@ -74,7 +74,7 @@ var audio_check_timer: Timer
 @onready var pitch_display: Label3D = $Display/PitchLabel
 @onready var note_display: Label3D = $Display/NoteLabel
 @onready var tuning_indicator: Label3D = $Display/TuningIndicator
-@onready var xr_camera: Node3D = get_node("/root/Tuner_main/Player/XRCamera3D")
+@onready var xr_camera: Node3D = get_node("/root/Tuner_main/Player/Player/XRCamera3D")
 
 func _ready() -> void:
 	if not XRServer:

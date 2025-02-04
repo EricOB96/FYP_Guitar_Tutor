@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://bjfdgvt5nd6e6"]
+[gd_scene load_steps=2 format=3 uid="uid://bmkd1yao18qhf"]
+
+[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/SceneManager.gd" id="1_ye12c"]
 
 [node name="MainMenu_UI" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_ye12c")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -42,14 +46,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Tuner_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "TUNER"
 
-[node name="Button2" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Scale_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "SCALES"
 
-[node name="Button3" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Chord_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "CHORDS"
+
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button" to="." method="_on_tuner_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Scale_button" to="." method="_on_scale_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Chord_button" to="." method="_on_chord_button_pressed"]
