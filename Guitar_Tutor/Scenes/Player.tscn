@@ -19,6 +19,8 @@ tracker = &"left_hand"
 [node name="LeftHand" parent="Player/LeftHandController" instance=ExtResource("2_ti1na")]
 
 [node name="FunctionPointer" parent="Player/LeftHandController" instance=ExtResource("3_b3w6e")]
+show_laser = 2
+laser_length = 1
 
 [node name="RightHandController" type="XRController3D" parent="Player"]
 tracker = &"right_hand"

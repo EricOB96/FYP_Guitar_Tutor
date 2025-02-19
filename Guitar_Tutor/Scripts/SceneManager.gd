@@ -3,8 +3,15 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mic_permission()
 	$Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button.pressed.connect(_on_tuner_button_pressed)
 
+	
+
+# Ask android for microphone persission	
+func mic_permission():
+	if OS.get_name() == "Android":
+		OS.request_permission("RECORD_AUDIO")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

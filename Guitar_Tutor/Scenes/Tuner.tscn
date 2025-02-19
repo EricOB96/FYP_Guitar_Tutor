@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5v7ffrfvn1qd"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/tuner.gd" id="1_516b5"]
+[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/Tuner.cs" id="1_mwsq8"]
 [ext_resource type="Material" uid="uid://du7la4b3s8h0o" path="res://Guitar_Tutor/Assets/Material/Green.tres" id="2_5e3is"]
 [ext_resource type="PackedScene" uid="uid://b60n7jt2o1ipu" path="res://Guitar_Tutor/Assets/Models/Tuner.glb" id="2_uj51p"]
 
@@ -10,10 +10,13 @@
 
 [sub_resource type="PrismMesh" id="PrismMesh_i41o0"]
 
-[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_rvymb"]
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_vbd1n"]
 
-[node name="Tuner" type="Node3D"]
-script = ExtResource("1_516b5")
+[node name="Tuner" type="Node3D" node_paths=PackedStringArray("pitchDisplay", "noteDisplay", "tuningIndicator")]
+script = ExtResource("1_mwsq8")
+pitchDisplay = NodePath("Display/PitchLabel")
+noteDisplay = NodePath("Display/NoteLabel")
+tuningIndicator = NodePath("Display/TuningIndicator")
 
 [node name="Display" parent="." instance=ExtResource("2_uj51p")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -55,7 +58,7 @@ skeleton = NodePath("../LowIndicator")
 surface_material_override/0 = ExtResource("2_5e3is")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Display"]
-stream = SubResource("AudioStreamMicrophone_rvymb")
+stream = SubResource("AudioStreamMicrophone_vbd1n")
 autoplay = true
 bus = &"Capture"
 

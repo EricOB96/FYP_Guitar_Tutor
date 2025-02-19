@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmkd1yao18qhf"]
+[gd_scene load_steps=3 format=3 uid="uid://bmkd1yao18qhf"]
 
 [ext_resource type="Script" path="res://Guitar_Tutor/Scripts/SceneManager.gd" id="1_ye12c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0c58b"]
+font_size = 32
+font_color = Color(0.670588, 0.286275, 1, 1)
+outline_color = Color(0.682353, 0.188235, 1, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.529412)
+shadow_offset = Vector2(2, 2)
 
 [node name="MainMenu_UI" type="CanvasLayer"]
 follow_viewport_enabled = true
@@ -42,12 +50,14 @@ theme_override_constants/separation = 32
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
 text = "GUITAR TUTOR"
+label_settings = SubResource("LabelSettings_0c58b")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="Tuner_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/outline_size = 2
 text = "TUNER"
 
 [node name="Scale_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]

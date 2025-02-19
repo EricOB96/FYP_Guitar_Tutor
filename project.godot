@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Guitar_tutor"
-run/main_scene="res://Guitar_Tutor/Scenes/main_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="res://Guitar_Tutor/Scenes/Tuner_Main.tscn"
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
@@ -36,7 +36,7 @@ project/assembly_name="Guitar_tutor"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg")
 
 [rendering]
 
