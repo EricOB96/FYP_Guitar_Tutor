@@ -1,24 +1,26 @@
-[gd_scene format=3 uid="uid://bmfjpppt7fhxy"]
+[gd_scene load_steps=2 format=3 uid="uid://bmfjpppt7fhxy"]
+
+[ext_resource type="Script" uid="uid://bynfjocg3whbk" path="res://Guitar_Tutor/Scenes/ScaleMenuManager.cs" id="1_errmg"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_errmg")
 
 [node name="ScaleMenu" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.242
 offset_right = 4.0
-offset_bottom = -2.0
+offset_bottom = 489.184
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="ScaleMenu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.451
-anchor_bottom = 0.125
-offset_right = -0.552063
-offset_bottom = 82.0
+anchor_right = 0.456
+anchor_bottom = 0.237
+offset_right = 329.864
+offset_bottom = 16.898
 color = Color(0.360784, 1, 1, 0.388235)
 
 [node name="MarginContainer" type="MarginContainer" parent="ScaleMenu/ColorRect"]
@@ -27,15 +29,16 @@ anchors_preset = -1
 anchor_left = 0.023
 anchor_right = 0.981
 anchor_bottom = 0.938
-offset_left = 0.0629988
-offset_top = 54.0
-offset_right = -378.139
-offset_bottom = -58.894
+offset_left = 0.289
+offset_top = 56.0
+offset_right = -680.717
+offset_bottom = -61.46
 
-[node name="OptionButton" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer"]
+[node name="note_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer"]
 layout_mode = 2
 item_count = 12
 popup/item_0/text = "C"
+popup/item_0/id = 0
 popup/item_1/text = "C#"
 popup/item_1/id = 1
 popup/item_2/text = "D"
@@ -68,13 +71,14 @@ anchor_right = 0.944
 anchor_bottom = 0.654
 offset_left = -0.156006
 offset_top = 11.783
-offset_right = 0.0639648
-offset_bottom = -12.602
+offset_right = -0.496033
+offset_bottom = -13.367
 
-[node name="OptionButton" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer2"]
+[node name="scale_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer2"]
 layout_mode = 2
 item_count = 4
 popup/item_0/text = "Major"
+popup/item_0/id = 0
 popup/item_1/text = "Minor"
 popup/item_1/id = 1
 popup/item_2/text = "Pentatonic Major"
@@ -83,27 +87,40 @@ popup/item_3/text = "Pentatonic Minor"
 popup/item_3/id = 3
 
 [node name="MarginContainer3" type="MarginContainer" parent="ScaleMenu/ColorRect"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 19.0
-offset_right = 120.0
-offset_bottom = 47.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.141
+anchor_right = 0.095
+anchor_bottom = 0.276
+offset_left = 0.289999
+offset_top = 0.0299988
+offset_right = -0.415009
+offset_bottom = 0.0799942
 
-[node name="Label" type="Label" parent="ScaleMenu/ColorRect/MarginContainer3"]
+[node name="NoteLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer3"]
 layout_mode = 2
 text = "NOTE"
 horizontal_alignment = 1
 uppercase = true
 
 [node name="MarginContainer4" type="MarginContainer" parent="ScaleMenu/ColorRect"]
-layout_mode = 0
-offset_left = 172.0
-offset_top = 23.0
-offset_right = 483.0
-offset_bottom = 47.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.309
+anchor_top = 0.135
+anchor_right = 0.417
+anchor_bottom = 0.271
+offset_left = 0.186981
+offset_top = 0.0499992
+offset_right = -0.369019
+offset_bottom = -0.0700035
 
-[node name="Label" type="Label" parent="ScaleMenu/ColorRect/MarginContainer4"]
+[node name="ScaleLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer4"]
 layout_mode = 2
 text = "SCALE"
 horizontal_alignment = 1
 uppercase = true
+
+[connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer/note_button" to="." method="_on_note_button_item_selected"]
+[connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer2/scale_button" to="." method="_on_scale_button_item_selected"]

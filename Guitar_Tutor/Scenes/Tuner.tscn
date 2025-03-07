@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5v7ffrfvn1qd"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/Tuner.cs" id="1_mwsq8"]
+[ext_resource type="Script" uid="uid://b3lmvcejhx7cw" path="res://Guitar_Tutor/Scripts/Tuner.cs" id="1_mwsq8"]
 [ext_resource type="Material" uid="uid://du7la4b3s8h0o" path="res://Guitar_Tutor/Assets/Material/Green.tres" id="2_5e3is"]
 [ext_resource type="PackedScene" uid="uid://b60n7jt2o1ipu" path="res://Guitar_Tutor/Assets/Models/Tuner.glb" id="2_uj51p"]
 

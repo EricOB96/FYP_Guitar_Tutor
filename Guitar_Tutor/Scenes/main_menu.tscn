@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dawiofb726y72"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_f3tch"]
+[ext_resource type="Script" uid="uid://wijdhip6dxic" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_f3tch"]
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_oupya"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_7ppcv"]
 [ext_resource type="PackedScene" uid="uid://bmkd1yao18qhf" path="res://Guitar_Tutor/Scenes/main_menu_ui.tscn" id="3_2ww8e"]

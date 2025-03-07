@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://da7aipicgamhq"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_d86gm"]
+[ext_resource type="Script" uid="uid://wijdhip6dxic" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_d86gm"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_ti1na"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="3_b3w6e"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="4_8sjy8"]
@@ -19,8 +19,9 @@ tracker = &"left_hand"
 [node name="LeftHand" parent="Player/LeftHandController" instance=ExtResource("2_ti1na")]
 
 [node name="FunctionPointer" parent="Player/LeftHandController" instance=ExtResource("3_b3w6e")]
-show_laser = 2
+show_laser = 0
 laser_length = 1
+show_target = true
 
 [node name="RightHandController" type="XRController3D" parent="Player"]
 tracker = &"right_hand"
@@ -28,3 +29,6 @@ tracker = &"right_hand"
 [node name="RightHand" parent="Player/RightHandController" instance=ExtResource("4_8sjy8")]
 
 [node name="FunctionPointer" parent="Player/RightHandController" instance=ExtResource("3_b3w6e")]
+show_laser = 0
+laser_length = 1
+show_target = true

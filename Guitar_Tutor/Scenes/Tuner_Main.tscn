@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://detq74pcpna7y"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_fhfes"]
+[ext_resource type="Script" uid="uid://wijdhip6dxic" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_fhfes"]
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="2_k2j77"]
 [ext_resource type="PackedScene" uid="uid://b5v7ffrfvn1qd" path="res://Guitar_Tutor/Scenes/Tuner.tscn" id="3_urhve"]
 

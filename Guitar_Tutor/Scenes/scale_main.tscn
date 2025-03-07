@@ -1,11 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3vn1sp57iq3d"]
+[gd_scene load_steps=5 format=3 uid="uid://d3vn1sp57iq3d"]
 
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_r80h3"]
 [ext_resource type="PackedScene" uid="uid://cv0bpodvixyjo" path="res://Guitar_Tutor/Scenes/fret_board.tscn" id="2_64xvu"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_ec60m"]
+[ext_resource type="PackedScene" uid="uid://bmfjpppt7fhxy" path="res://Guitar_Tutor/Scenes/Scale_Menu.tscn" id="4_46dqx"]
 
 [node name="Scale_main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_r80h3")]
 
-[node name="FretBoard" parent="Player" instance=ExtResource("2_64xvu")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.3806e-08, 0, -0.615469)
+[node name="FretBoard" parent="." instance=ExtResource("2_64xvu")]
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("3_ec60m")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0.313575, 2.36334)
+screen_size = Vector2(768, 360)
+scene = ExtResource("4_46dqx")
+viewport_size = Vector2(640, 360)
+scene_properties_keys = PackedStringArray()
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.755076, 0.655637, 0, -0.655637, 0.755076, 0, 1.25524, 1.93104)
+light_energy = 3.909
+sky_mode = 1

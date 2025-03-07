@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmkd1yao18qhf"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/SceneManager.gd" id="1_ye12c"]
+[ext_resource type="Script" uid="uid://bu1gp20bsd0ha" path="res://Guitar_Tutor/Scripts/SceneManager.gd" id="1_ye12c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0c58b"]
 font_size = 32
