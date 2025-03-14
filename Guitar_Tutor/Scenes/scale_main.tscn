@@ -1,24 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3vn1sp57iq3d"]
+[gd_scene load_steps=8 format=3 uid="uid://d3vn1sp57iq3d"]
 
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_r80h3"]
 [ext_resource type="PackedScene" uid="uid://cv0bpodvixyjo" path="res://Guitar_Tutor/Scenes/fret_board.tscn" id="2_64xvu"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_ec60m"]
+[ext_resource type="Script" uid="uid://buehc5eylrn4x" path="res://Guitar_Tutor/Scripts/ScaleHighlighter.cs" id="3_u2ifm"]
 [ext_resource type="PackedScene" uid="uid://bmfjpppt7fhxy" path="res://Guitar_Tutor/Scenes/Scale_Menu.tscn" id="4_46dqx"]
+[ext_resource type="Script" uid="uid://ci400no5mtjhf" path="res://Guitar_Tutor/Scripts/CameraFollow.cs" id="4_xwb3j"]
+[ext_resource type="Script" uid="uid://bbp11lrqdirjs" path="res://Guitar_Tutor/Scripts/ScaleLibrary.cs" id="6_u2ifm"]
 
 [node name="Scale_main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_r80h3")]
 
 [node name="FretBoard" parent="." instance=ExtResource("2_64xvu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.331928, 0)
 
-[node name="Viewport2Din3D" parent="." instance=ExtResource("3_ec60m")]
-transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0.313575, 2.36334)
+[node name="ScaleHighlighter" type="Node3D" parent="FretBoard"]
+script = ExtResource("3_u2ifm")
+
+[node name="Camera_Follow" type="Node3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0.938758, -1.41709)
+script = ExtResource("4_xwb3j")
+_distanceFromCamera = 1.0
+
+[node name="Viewport2Din3D" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 screen_size = Vector2(768, 360)
 scene = ExtResource("4_46dqx")
-viewport_size = Vector2(640, 360)
-scene_properties_keys = PackedStringArray()
+viewport_size = Vector2(1000, 360)
+scene_properties_keys = PackedStringArray("ScaleMenuManager", "_scaleHighlighterPath", "_scaleLibraryPath")
+_scaleHighlighterPath = NodePath("../../FretBoard/ScaleHighlighter")
+_scaleLibraryPath = NodePath("../../ScaleLibrary")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.755076, 0.655637, 0, -0.655637, 0.755076, 0, 1.25524, 1.93104)
-light_energy = 3.909
-sky_mode = 1
+[node name="ScaleLibrary" type="Node3D" parent="."]
+script = ExtResource("6_u2ifm")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 5.0
+omni_range = 4096.0

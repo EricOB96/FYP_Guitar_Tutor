@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmfjpppt7fhxy"]
 
-[ext_resource type="Script" uid="uid://bynfjocg3whbk" path="res://Guitar_Tutor/Scenes/ScaleMenuManager.cs" id="1_errmg"]
+[ext_resource type="Script" uid="uid://bynfjocg3whbk" path="res://Guitar_Tutor/Scripts/ScaleMenuManager.cs" id="1_errmg"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="ScaleMenu_UI" type="CanvasLayer"]
 script = ExtResource("1_errmg")
 
 [node name="ScaleMenu" type="Control" parent="."]
@@ -17,22 +17,21 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="ScaleMenu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.456
-anchor_bottom = 0.237
-offset_right = 329.864
-offset_bottom = 16.898
+anchor_right = 0.811
+anchor_bottom = 0.263
+offset_right = 0.483948
+offset_bottom = 0.10199
 color = Color(0.360784, 1, 1, 0.388235)
 
 [node name="MarginContainer" type="MarginContainer" parent="ScaleMenu/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.023
 anchor_right = 0.981
-anchor_bottom = 0.938
-offset_left = 0.289
+anchor_bottom = 1.0
+offset_left = 20.0
 offset_top = 56.0
-offset_right = -680.717
-offset_bottom = -61.46
+offset_right = -622.717
+offset_bottom = -72.0
 
 [node name="note_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer"]
 layout_mode = 2
@@ -76,6 +75,7 @@ offset_bottom = -13.367
 
 [node name="scale_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer2"]
 layout_mode = 2
+selected = 0
 item_count = 4
 popup/item_0/text = "Major"
 popup/item_0/id = 0

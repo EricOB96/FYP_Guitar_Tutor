@@ -18,5 +18,6 @@ viewport_size = Vector2(640, 640)
 unshaded = true
 scene_properties_keys = PackedStringArray("SceneManager.gd")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.886131, 0.463435, 0, -0.463435, 0.886131, 0, 0.636906, 0)
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 5.0
+omni_range = 735.167

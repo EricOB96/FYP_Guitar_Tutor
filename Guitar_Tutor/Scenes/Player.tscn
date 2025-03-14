@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="3_b3w6e"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="4_8sjy8"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Player" type="Node3D"]
 script = ExtResource("1_d86gm")
 
 [node name="Player" type="XROrigin3D" parent="."]
@@ -22,6 +22,7 @@ tracker = &"left_hand"
 show_laser = 0
 laser_length = 1
 show_target = true
+target_radius = 0.005
 
 [node name="RightHandController" type="XRController3D" parent="Player"]
 tracker = &"right_hand"
@@ -32,3 +33,4 @@ tracker = &"right_hand"
 show_laser = 0
 laser_length = 1
 show_target = true
+target_radius = 0.005

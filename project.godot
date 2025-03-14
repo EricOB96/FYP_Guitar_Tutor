@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Guitar_tutor"
-run/main_scene="res://Guitar_Tutor/Scenes/Tuner_Main.tscn"
+run/main_scene="uid://d3vn1sp57iq3d"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

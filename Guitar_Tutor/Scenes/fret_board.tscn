@@ -12,598 +12,598 @@ transform = Transform3D(3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, 0)
 
 [node name="OpenString" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0533368, 0.136478, -0.928093)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0307958, 0.136573, -0.928093)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.928093)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.928093)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0358112, 0.136573, -0.928093)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/OpenString"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0565946, 0.136573, -0.928093)
 radius = 0.005
 
 [node name="Fret1" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0533368, 0.136478, -0.860372)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0307958, 0.136573, -0.860372)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.860372)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.860372)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0358112, 0.136573, -0.860372)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0565946, 0.136573, -0.860372)
 radius = 0.005
 
 [node name="Fret2" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0533368, 0.136478, -0.761175)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0307958, 0.136573, -0.761175)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.761175)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.761175)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0358112, 0.136573, -0.761175)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0565946, 0.136573, -0.761175)
 radius = 0.005
 
 [node name="Fret3" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0533368, 0.136478, -0.652143)
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0533368, 0.136478, -0.656643)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0307958, 0.136573, -0.652143)
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0307958, 0.136573, -0.656643)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.652143)
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.656643)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.652143)
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.656643)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0358112, 0.136573, -0.652143)
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0358112, 0.136573, -0.656643)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0565946, 0.136573, -0.652143)
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0565946, 0.136573, -0.656643)
 radius = 0.005
 
 [node name="Fret4" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0560426, 0.136478, -0.555189)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0325915, 0.136573, -0.555189)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.555189)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.555189)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0393937, 0.136573, -0.555189)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0601117, 0.136573, -0.555189)
 radius = 0.005
 
 [node name="Fret5" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0584834, 0.136478, -0.468034)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0339825, 0.136573, -0.468034)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.468034)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.468034)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0390632, 0.136573, -0.468034)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0610574, 0.136573, -0.468034)
 radius = 0.005
 
 [node name="Fret6" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0583235, 0.136478, -0.380915)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0337933, 0.136573, -0.380915)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.380915)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.380915)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0378317, 0.136573, -0.380915)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0626293, 0.136573, -0.380915)
 radius = 0.005
 
 [node name="Fret7" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0602345, 0.136478, -0.303634)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035408, 0.136573, -0.303634)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.303634)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.303634)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0376199, 0.136573, -0.303634)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0619023, 0.136573, -0.303634)
 radius = 0.005
 
 [node name="Fret8" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0613539, 0.136478, -0.227866)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0364012, 0.136573, -0.227866)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.227866)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.227866)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038248, 0.136573, -0.227866)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621883, 0.136573, -0.227866)
 radius = 0.005
 
 [node name="Fret9" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0616945, 0.136478, -0.151244)
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0616945, 0.136478, -0.156854)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0367081, 0.136573, -0.151244)
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0367081, 0.136573, -0.156854)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.151244)
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010004, 0.136573, -0.156854)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.151244)
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.156854)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0403032, 0.136573, -0.151244)
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0403032, 0.136573, -0.156854)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0645572, 0.136573, -0.151244)
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0645572, 0.136573, -0.156854)
 radius = 0.005
 
 [node name="Fret10" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0607045, 0.136478, -0.0865413)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0365459, 0.136573, -0.0865413)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0109267, 0.136573, -0.0865413)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.0865413)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.039742, 0.136573, -0.0865413)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06361, 0.136573, -0.0865413)
 radius = 0.005
 
 [node name="Fret11" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0635902, 0.136478, -0.0207654)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0385161, 0.136573, -0.0207654)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115909, 0.136573, -0.0207654)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, -0.0207654)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0410879, 0.136573, -0.0207654)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.066613, 0.136573, -0.0207654)
 radius = 0.005
 
 [node name="Fret12" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0631786, 0.136478, 0.0344719)
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0649006, 0.136478, 0.0344719)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0381228, 0.136573, 0.0344719)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112382, 0.136573, 0.0344719)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.0344719)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0428947, 0.136573, 0.0344719)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0669766, 0.136573, 0.0344719)
 radius = 0.005
 
 [node name="Fret13" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0631786, 0.136478, 0.0933789)
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0650146, 0.136478, 0.0933789)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0381228, 0.136573, 0.0933789)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112382, 0.136573, 0.0933789)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.0933789)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0398151, 0.136573, 0.0933789)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0669766, 0.136573, 0.0933789)
 radius = 0.005
 
 [node name="Fret14" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0661405, 0.136478, 0.146927)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0411265, 0.136573, 0.146927)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112382, 0.136573, 0.146927)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.146927)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0412601, 0.136573, 0.146927)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699089, 0.136573, 0.146927)
 radius = 0.005
 
 [node name="Fret15" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0675569, 0.136478, 0.19885)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0381228, 0.136573, 0.19885)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112382, 0.136573, 0.19885)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.19885)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0427155, 0.136573, 0.19885)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0712917, 0.136573, 0.19885)
 radius = 0.005
 
 [node name="Fret16" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0682587, 0.136478, 0.245704)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0406511, 0.136573, 0.245704)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112382, 0.136573, 0.245704)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.245704)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0423382, 0.136573, 0.245704)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0707654, 0.136573, 0.245704)
 radius = 0.005
 
 [node name="Fret17" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0678819, 0.136478, 0.289724)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393013, 0.136573, 0.289724)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0135816, 0.136573, 0.289724)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.289724)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0421746, 0.136573, 0.289724)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0705153, 0.136573, 0.289724)
 radius = 0.005
 
 [node name="Fret18" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687202, 0.136478, 0.33108)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0414517, 0.136573, 0.33108)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0134489, 0.136573, 0.33108)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139199, 0.136984, 0.33108)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0420453, 0.136573, 0.33108)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0716807, 0.136573, 0.33108)
 radius = 0.005
 
 [node name="Fret19" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0694344, 0.136478, 0.371434)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040192, 0.136573, 0.371434)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014374, 0.136573, 0.371434)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0139353, 0.136984, 0.371434)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0427371, 0.136573, 0.371434)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0718818, 0.136573, 0.371434)
 radius = 0.005
 
 [node name="Fret20" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0685782, 0.136478, 0.409883)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0417308, 0.136573, 0.409883)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0130489, 0.136573, 0.409883)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015721, 0.136984, 0.409883)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0434195, 0.136573, 0.409883)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07058, 0.136573, 0.409883)
 radius = 0.005
 
 [node name="Fret21" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0711551, 0.136478, 0.444442)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0414613, 0.136573, 0.444442)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0146536, 0.136573, 0.444442)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0164147, 0.136984, 0.444442)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0439688, 0.136573, 0.444442)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0711186, 0.136573, 0.444442)
 radius = 0.005
 
 [node name="Fret22" type="Node3D" parent="FretboardV3/ScaleNodes"]
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
+[node name="String6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0709914, 0.136478, 0.476952)
 radius = 0.005
 
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
+[node name="String5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0411918, 0.136573, 0.476952)
 radius = 0.005
 
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
+[node name="String4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0135414, 0.136573, 0.476952)
 radius = 0.005
 
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
+[node name="String3" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0154533, 0.136984, 0.476952)
 radius = 0.005
 
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
+[node name="String2" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.043643, 0.136573, 0.476952)
 radius = 0.005
 
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
+[node name="String1" type="CSGSphere3D" parent="FretboardV3/ScaleNodes/Fret22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0723538, 0.136573, 0.476952)
 radius = 0.005
