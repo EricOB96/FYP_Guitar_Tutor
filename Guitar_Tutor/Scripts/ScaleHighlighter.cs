@@ -111,11 +111,11 @@ public partial class ScaleHighlighter : Node
                 // Handle differently for open string vs regular frets
                 if (fret == 0)
                 {
-                    node = GetNodeOrNull<Node3D>($"../FretboardV3/ScaleNodes/OpenString/String{stringNum}");
+                    node = GetNodeOrNull<Node3D>($"../XRToolsPickable/FretboardV3/ScaleNodes/OpenString/String{stringNum}");
                 }
                 else
                 {
-                    node = GetNodeOrNull<Node3D>($"../FretboardV3/ScaleNodes/Fret{fret}/String{stringNum}");
+                    node = GetNodeOrNull<Node3D>($"../XRToolsPickable/FretboardV3/ScaleNodes/Fret{fret}/String{stringNum}");
                 }
 
                 if (node != null)

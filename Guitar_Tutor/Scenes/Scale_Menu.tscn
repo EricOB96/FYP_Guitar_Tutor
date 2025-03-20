@@ -17,10 +17,10 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="ScaleMenu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.811
-anchor_bottom = 0.263
-offset_right = 0.483948
-offset_bottom = 0.10199
+anchor_right = 0.923
+anchor_bottom = 0.495
+offset_right = 0.0119629
+offset_bottom = 0.22998
 color = Color(0.360784, 1, 1, 0.388235)
 
 [node name="MarginContainer" type="MarginContainer" parent="ScaleMenu/ColorRect"]
@@ -30,8 +30,8 @@ anchor_right = 0.981
 anchor_bottom = 1.0
 offset_left = 20.0
 offset_top = 56.0
-offset_right = -622.717
-offset_bottom = -72.0
+offset_right = -766.727
+offset_bottom = -205.0
 
 [node name="note_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer"]
 layout_mode = 2
@@ -64,14 +64,12 @@ popup/item_11/id = 11
 [node name="MarginContainer2" type="MarginContainer" parent="ScaleMenu/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.324
-anchor_top = 0.259
 anchor_right = 0.944
-anchor_bottom = 0.654
-offset_left = -0.156006
-offset_top = 11.783
-offset_right = -0.496033
-offset_bottom = -13.367
+anchor_bottom = 1.0
+offset_left = 346.0
+offset_top = 56.0
+offset_right = -0.247986
+offset_bottom = -205.0
 
 [node name="scale_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer2"]
 layout_mode = 2
@@ -89,14 +87,12 @@ popup/item_3/id = 3
 [node name="MarginContainer3" type="MarginContainer" parent="ScaleMenu/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.03
-anchor_top = 0.141
-anchor_right = 0.095
-anchor_bottom = 0.276
-offset_left = 0.289999
-offset_top = 0.0299988
-offset_right = -0.415009
-offset_bottom = 0.0799942
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 20.0
+offset_right = -966.0
+offset_bottom = -262.0
 
 [node name="NoteLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer3"]
 layout_mode = 2
@@ -107,14 +103,12 @@ uppercase = true
 [node name="MarginContainer4" type="MarginContainer" parent="ScaleMenu/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.309
-anchor_top = 0.135
-anchor_right = 0.417
-anchor_bottom = 0.271
-offset_left = 0.186981
-offset_top = 0.0499992
-offset_right = -0.369019
-offset_bottom = -0.0700035
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 330.0
+offset_top = 19.0
+offset_right = -616.0
+offset_bottom = -269.0
 
 [node name="ScaleLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer4"]
 layout_mode = 2

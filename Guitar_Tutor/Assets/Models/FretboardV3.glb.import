@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/FretboardV3.glb-ca5c445db0a855f82afa42eb149e1
 
 nodes/root_type=""
 nodes/root_name=""
-nodes/apply_root_scale=true
+nodes/apply_root_scale=false
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 nodes/use_node_type_suffixes=true
@@ -32,6 +32,105 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Fret": {
+"generate/physics": true
+},
+"PATH:Fret_001": {
+"generate/physics": true
+},
+"PATH:Fret_002": {
+"generate/physics": true
+},
+"PATH:Fret_003": {
+"generate/physics": true
+},
+"PATH:Fret_004": {
+"generate/physics": true
+},
+"PATH:Fret_005": {
+"generate/physics": true
+},
+"PATH:Fret_006": {
+"generate/physics": true
+},
+"PATH:Fret_007": {
+"generate/physics": true
+},
+"PATH:Fret_008": {
+"generate/physics": true
+},
+"PATH:Fret_009": {
+"generate/physics": true
+},
+"PATH:Fret_010": {
+"generate/physics": true
+},
+"PATH:Fret_011": {
+"generate/physics": true
+},
+"PATH:Fret_012": {
+"generate/physics": true
+},
+"PATH:Fret_013": {
+"generate/physics": true
+},
+"PATH:Fret_014": {
+"generate/physics": true
+},
+"PATH:Fret_015": {
+"generate/physics": true
+},
+"PATH:Fret_016": {
+"generate/physics": true
+},
+"PATH:Fret_017": {
+"generate/physics": true
+},
+"PATH:Fret_018": {
+"generate/physics": true
+},
+"PATH:Fret_019": {
+"generate/physics": true
+},
+"PATH:Fret_020": {
+"generate/physics": true
+},
+"PATH:Fret_021": {
+"generate/physics": true
+},
+"PATH:InlaysSide": {
+"generate/physics": true
+},
+"PATH:InlaysTop": {
+"generate/physics": true
+},
+"PATH:Neck": {
+"generate/physics": true
+},
+"PATH:Nut": {
+"generate/physics": true
+},
+"PATH:String1": {
+"generate/physics": true
+},
+"PATH:String2": {
+"generate/physics": true
+},
+"PATH:String3": {
+"generate/physics": true
+},
+"PATH:String4": {
+"generate/physics": true
+},
+"PATH:String5": {
+"generate/physics": true
+},
+"PATH:String6": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

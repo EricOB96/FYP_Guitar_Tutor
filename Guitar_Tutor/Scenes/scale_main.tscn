@@ -13,7 +13,7 @@
 [node name="Player" parent="." instance=ExtResource("1_r80h3")]
 
 [node name="FretBoard" parent="." instance=ExtResource("2_64xvu")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.331928, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.331928, 0)
 
 [node name="ScaleHighlighter" type="Node3D" parent="FretBoard"]
 script = ExtResource("3_u2ifm")
@@ -22,6 +22,7 @@ script = ExtResource("3_u2ifm")
 transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0.938758, -1.41709)
 script = ExtResource("4_xwb3j")
 _distanceFromCamera = 1.0
+_positionOffset = Vector3(0, 0.1, 0)
 
 [node name="Viewport2Din3D" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -36,5 +37,8 @@ _scaleLibraryPath = NodePath("../../ScaleLibrary")
 script = ExtResource("6_u2ifm")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-light_energy = 5.0
+light_energy = 12.0
 omni_range = 4096.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.387129, 0.922025, 0, -0.922025, 0.387129, 0, 0.35946, 0)

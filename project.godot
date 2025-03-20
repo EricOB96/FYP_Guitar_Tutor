@@ -38,6 +38,14 @@ project/assembly_name="Guitar_tutor"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg")
 
+[input]
+
+AX_button={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

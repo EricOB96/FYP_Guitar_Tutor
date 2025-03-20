@@ -8,10 +8,10 @@
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	},
-	"Godot Debug FretBoard": {
+	"Godot Debug Player": {
 	  "commandName": "Executable",
 	  "executablePath": "C:/Users/erico/OneDrive/Desktop/Godot_v4.4-stable_mono_win64/Godot_v4.4-stable_mono_win64.exe",
-	  "commandLineArgs": "--upwards ./Guitar_Tutor/Scenes/fret_board.tscn --verbose",
+	  "commandLineArgs": "--upwards ./Guitar_Tutor/Scenes/Player.tscn --verbose",
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	}
