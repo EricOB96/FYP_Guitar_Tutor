@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://detq74pcpna7y"]
+[gd_scene load_steps=7 format=3 uid="uid://detq74pcpna7y"]
 
 [ext_resource type="Script" uid="uid://wijdhip6dxic" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_fhfes"]
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="2_k2j77"]
 [ext_resource type="PackedScene" uid="uid://b5v7ffrfvn1qd" path="res://Guitar_Tutor/Scenes/Tuner.tscn" id="3_anwo8"]
+[ext_resource type="Script" uid="uid://ci400no5mtjhf" path="res://Guitar_Tutor/Scripts/CameraFollow.cs" id="3_sq07b"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="4_kpu03"]
+[ext_resource type="PackedScene" uid="uid://beehevhvlyd41" path="res://Guitar_Tutor/Scenes/PauseMenu.tscn" id="5_vqlox"]
 
 [node name="Tuner_main" type="Node3D"]
 script = ExtResource("1_fhfes")
@@ -10,9 +13,23 @@ script = ExtResource("1_fhfes")
 [node name="Player" parent="." instance=ExtResource("2_k2j77")]
 script = null
 
-[node name="Tuner" parent="." instance=ExtResource("3_anwo8")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 5.0
 omni_range = 1092.45
+
+[node name="Camera_Follow" type="Node3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0.938758, -1.41709)
+script = ExtResource("3_sq07b")
+_distanceFromCamera = 1.0
+_positionOffset = Vector3(0, 0.1, 0)
+
+[node name="PauseMenu" parent="Camera_Follow" instance=ExtResource("4_kpu03")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30.1963, 0, -323.127)
+visible = false
+screen_size = Vector2(1024, 768)
+scene = ExtResource("5_vqlox")
+viewport_size = Vector2(640, 640)
+scene_properties_keys = PackedStringArray()
+
+[node name="Tuner" parent="Camera_Follow" instance=ExtResource("3_anwo8")]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, -938.758, 1417.09)

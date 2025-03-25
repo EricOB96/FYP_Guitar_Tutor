@@ -84,6 +84,31 @@ popup/item_2/id = 2
 popup/item_3/text = "Pentatonic Minor"
 popup/item_3/id = 3
 
+[node name="MarginContainer5" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.944
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 155.0
+offset_right = -729.248
+offset_bottom = -107.0
+
+[node name="position_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer5"]
+layout_mode = 2
+selected = 0
+item_count = 5
+popup/item_0/text = "1st"
+popup/item_0/id = 0
+popup/item_1/text = "2nd"
+popup/item_1/id = 1
+popup/item_2/text = "3rd"
+popup/item_2/id = 2
+popup/item_3/text = "4th"
+popup/item_3/id = 3
+popup/item_4/text = "5th"
+popup/item_4/id = 4
+
 [node name="MarginContainer3" type="MarginContainer" parent="ScaleMenu/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
@@ -116,5 +141,22 @@ text = "SCALE"
 horizontal_alignment = 1
 uppercase = true
 
+[node name="MarginContainer6" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 118.0
+offset_right = -938.0
+offset_bottom = -170.0
+
+[node name="ScaleLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer6"]
+layout_mode = 2
+text = "PATTERN"
+horizontal_alignment = 1
+uppercase = true
+
 [connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer/note_button" to="." method="_on_note_button_item_selected"]
 [connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer2/scale_button" to="." method="_on_scale_button_item_selected"]
+[connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer5/position_button" to="." method="_on_position_button_item_selected"]

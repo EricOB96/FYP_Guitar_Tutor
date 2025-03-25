@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_tutor", "Guitar_tutor.csproj", "{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_tutor", "Guitar_tutor.csproj", "{92200CC2-7C51-4BCE-AE38-95788A0876C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{7E7D29AD-EB2A-4DF4-9D01-18F4F9725A00}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{92200CC2-7C51-4BCE-AE38-95788A0876C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92200CC2-7C51-4BCE-AE38-95788A0876C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92200CC2-7C51-4BCE-AE38-95788A0876C2}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{92200CC2-7C51-4BCE-AE38-95788A0876C2}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{92200CC2-7C51-4BCE-AE38-95788A0876C2}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{92200CC2-7C51-4BCE-AE38-95788A0876C2}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -16,6 +16,7 @@ script = ExtResource("1_matfq")
 
 [node name="LeftHandController" type="XRController3D" parent="Player"]
 tracker = &"left_hand"
+script = ExtResource("6_xhen4")
 
 [node name="LeftHand" parent="Player/LeftHandController" instance=ExtResource("2_ti1na")]
 
@@ -47,4 +48,5 @@ metadata/_custom_type_script = "uid://cevyf5r6mfbcw"
 
 [node name="QuestController" type="Node3D" parent="Player"]
 
+[connection signal="button_pressed" from="Player/LeftHandController" to="Player/LeftHandController" method="_on_button_pressed_left"]
 [connection signal="button_pressed" from="Player/RightHandController" to="Player/RightHandController" method="_on_button_pressed"]

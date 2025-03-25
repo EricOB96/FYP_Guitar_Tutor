@@ -16,7 +16,7 @@ screen_size = Vector2(1280, 768)
 scene = ExtResource("3_2ww8e")
 viewport_size = Vector2(640, 640)
 unshaded = true
-scene_properties_keys = PackedStringArray("SceneManager.gd")
+scene_properties_keys = PackedStringArray()
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 5.0

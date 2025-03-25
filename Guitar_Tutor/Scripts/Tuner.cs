@@ -13,10 +13,7 @@ public partial class Tuner : Node3D
 	private const int BUFFER_SIZE = 2048;   // Size of audio buffer for processing
 	private const float DEFAULT_THRESHOLD = 0.15f;  // Threshold for pitch detection
 
-	/// <summary>
-	/// Inner class that implements the YIN pitch detection algorithm.
-	/// Reference: http://audition.ens.fr/adc/pdf/2002_JASA_YIN.pdf
-	/// </summary>
+	
 	private class PitchDetector
 	{
 		private int bufferSize;

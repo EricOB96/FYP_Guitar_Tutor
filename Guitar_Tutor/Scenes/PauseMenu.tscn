@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmkd1yao18qhf"]
+[gd_scene load_steps=5 format=3 uid="uid://beehevhvlyd41"]
 
-[ext_resource type="Script" uid="uid://crkkssjlxc27x" path="res://Guitar_Tutor/Scripts/SceneManager.cs" id="1_2jb5f"]
-[ext_resource type="FontFile" uid="uid://ccsio7tagaqx" path="res://Guitar_Tutor/Assets/Fonts/Bullpen3D.ttf" id="2_418pr"]
-[ext_resource type="FontFile" uid="uid://0ks1cxh8joht" path="res://Guitar_Tutor/Assets/Fonts/ALBA____.TTF" id="3_1pw2x"]
+[ext_resource type="FontFile" uid="uid://ccsio7tagaqx" path="res://Guitar_Tutor/Assets/Fonts/Bullpen3D.ttf" id="1_kgwam"]
+[ext_resource type="Script" uid="uid://8qof5qnmpke" path="res://Guitar_Tutor/Scripts/PauseMenu.cs" id="1_smtfb"]
+[ext_resource type="FontFile" uid="uid://0ks1cxh8joht" path="res://Guitar_Tutor/Assets/Fonts/ALBA____.TTF" id="2_smtfb"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_0c58b"]
-font = ExtResource("3_1pw2x")
+[sub_resource type="LabelSettings" id="LabelSettings_4rmdh"]
+font = ExtResource("2_smtfb")
 font_size = 64
 font_color = Color(0.807843, 0.627451, 0.0313726, 1)
 outline_size = 10
@@ -14,9 +14,8 @@ shadow_size = 4
 shadow_color = Color(0, 0, 0, 0.529412)
 shadow_offset = Vector2(2, 2)
 
-[node name="MainMenu_UI" type="CanvasLayer"]
-follow_viewport_enabled = true
-script = ExtResource("1_2jb5f")
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_smtfb")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -53,9 +52,9 @@ theme_override_constants/separation = 32
 [node name="Title" type="Label" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
-theme_override_fonts/font = ExtResource("2_418pr")
-text = "GUITAR TUTOR"
-label_settings = SubResource("LabelSettings_0c58b")
+theme_override_fonts/font = ExtResource("1_kgwam")
+text = "PAUSE"
+label_settings = SubResource("LabelSettings_4rmdh")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -63,24 +62,30 @@ uppercase = true
 [node name="Tuner_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_1pw2x")
+theme_override_fonts/font = ExtResource("2_smtfb")
 theme_override_font_sizes/font_size = 32
 text = "TUNER"
 
 [node name="Scale_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_1pw2x")
+theme_override_fonts/font = ExtResource("2_smtfb")
 theme_override_font_sizes/font_size = 32
 text = "SCALES"
 
 [node name="Help" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_1pw2x")
+theme_override_fonts/font = ExtResource("2_smtfb")
 theme_override_font_sizes/font_size = 32
 text = "HELP"
 
-[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button" to="." method="_on_tuner_button_pressed"]
-[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Scale_button" to="." method="_on_scale_button_pressed"]
-[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Help" to="." method="_on_chord_button_pressed"]
+[node name="Exit" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_smtfb")
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button" to="." method="OnTunerButtonPressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Scale_button" to="." method="OnScaleButtonPressed"]
