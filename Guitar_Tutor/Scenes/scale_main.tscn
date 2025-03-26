@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3vn1sp57iq3d"]
+[gd_scene load_steps=17 format=3 uid="uid://d3vn1sp57iq3d"]
 
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_r80h3"]
 [ext_resource type="PackedScene" uid="uid://cv0bpodvixyjo" path="res://Guitar_Tutor/Scenes/fret_board.tscn" id="2_64xvu"]
@@ -9,8 +9,12 @@
 [ext_resource type="Script" uid="uid://ci400no5mtjhf" path="res://Guitar_Tutor/Scripts/CameraFollow.cs" id="4_xwb3j"]
 [ext_resource type="Script" uid="uid://bbp11lrqdirjs" path="res://Guitar_Tutor/Scripts/ScaleLibrary.cs" id="6_u2ifm"]
 [ext_resource type="PackedScene" uid="uid://beehevhvlyd41" path="res://Guitar_Tutor/Scenes/PauseMenu.tscn" id="8_3go61"]
+[ext_resource type="PackedScene" uid="uid://dmvun4rhib7yj" path="res://Guitar_Tutor/Scenes/Feedback_Menu.tscn" id="9_0h0dh"]
 [ext_resource type="Script" uid="uid://dkac5ssryo7o2" path="res://Guitar_Tutor/Scripts/YinPitchDetector.cs" id="9_3go61"]
 [ext_resource type="Script" uid="uid://bei1hayt0xoya" path="res://Guitar_Tutor/Scripts/AudioSetup.cs" id="11_53apj"]
+[ext_resource type="Script" uid="uid://baaeh0ndjy7wa" path="res://Guitar_Tutor/Scripts/FeedbackSystem.cs" id="13_3vw7q"]
+[ext_resource type="AudioStream" uid="uid://cctehs3vt8o4o" path="res://Guitar_Tutor/Assets/Audio/correct-note.mp3" id="14_46a08"]
+[ext_resource type="AudioStream" uid="uid://comr4ks1gxij5" path="res://Guitar_Tutor/Assets/Audio/correct-scale.mp3" id="15_g45ju"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_3go61"]
 
@@ -28,7 +32,6 @@ script = ExtResource("3_53apj")
 script = ExtResource("4_53apj")
 _yinDetectorPath = NodePath("../../PitchDetector")
 _patternHighlighterPath = NodePath("../PatternHighlighter")
-_confidenceThreshold = 0.5
 _highlightDuration = 0.8
 
 [node name="Camera_Follow" type="Node3D" parent="."]
@@ -50,11 +53,17 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 screen_size = Vector2(768, 360)
 scene = ExtResource("4_46dqx")
 viewport_size = Vector2(1000, 360)
-scene_properties_keys = PackedStringArray("ScaleMenuManager", "_scaleHighlighterPath", "_patternHighlighterPath", "_scaleLibraryPath", "_positionLockDetectorPath")
-_scaleHighlighterPath = NodePath("")
+scene_properties_keys = PackedStringArray("ScaleMenuManager", "_patternHighlighterPath", "_scaleLibraryPath", "_positionLockDetectorPath")
 _patternHighlighterPath = NodePath("")
 _scaleLibraryPath = NodePath("../../ScaleLibrary")
 _positionLockDetectorPath = NodePath("")
+
+[node name="Feedback" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.3528, -353.581, 0)
+screen_size = Vector2(1400, 420)
+scene = ExtResource("9_0h0dh")
+viewport_size = Vector2(768, 360)
+scene_properties_keys = PackedStringArray()
 
 [node name="ScaleLibrary" type="Node3D" parent="."]
 script = ExtResource("6_u2ifm")
@@ -78,3 +87,11 @@ bus = &"Capture"
 script = ExtResource("11_53apj")
 _yinDetectorPath = NodePath("../PitchDetector")
 _debugMode = false
+
+[node name="FeedbackSystem" type="Node3D" parent="."]
+script = ExtResource("13_3vw7q")
+_correctNoteSound = ExtResource("14_46a08")
+_completeScaleSound = ExtResource("15_g45ju")
+_yinDetectorPath = NodePath("../PitchDetector")
+_patternHighlighterPath = NodePath("../FretBoard/PatternHighlighter")
+_detectionThreshold = 0.8

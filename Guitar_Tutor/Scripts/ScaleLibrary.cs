@@ -4,6 +4,44 @@ using System.Collections.Generic;
 
 public partial class ScaleLibrary : Node
 {
+    // Signals for scale and root note changes
+    [Signal]
+    public delegate void RootNoteChangedEventHandler(string newRootNote);
+
+    [Signal]
+    public delegate void ScaleTypeChangedEventHandler(string newScaleType);
+
+    // Properties with change notification
+    private string _currentRootNote = "A";
+    public string CurrentRootNote
+    {
+        get => _currentRootNote;
+        set
+        {
+            if (_currentRootNote != value)
+            {
+                _currentRootNote = value;
+                GD.Print($"ScaleLibrary root note changed to: {value}");
+                EmitSignal(SignalName.RootNoteChanged, value);
+            }
+        }
+    }
+
+    private string _currentScaleType = "major";
+    public string CurrentScaleType
+    {
+        get => _currentScaleType;
+        set
+        {
+            if (_currentScaleType != value)
+            {
+                _currentScaleType = value;
+                GD.Print($"ScaleLibrary scale type changed to: {value}");
+                EmitSignal(SignalName.ScaleTypeChanged, value);
+            }
+        }
+    }
+
     // Dictionary to store scale definitions
     private Dictionary<string, ScaleDefinition> _scales = new Dictionary<string, ScaleDefinition>();
 

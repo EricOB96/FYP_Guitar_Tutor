@@ -50,3 +50,4 @@ metadata/_custom_type_script = "uid://cevyf5r6mfbcw"
 
 [connection signal="button_pressed" from="Player/LeftHandController" to="Player/LeftHandController" method="_on_button_pressed_left"]
 [connection signal="button_pressed" from="Player/RightHandController" to="Player/RightHandController" method="_on_button_pressed"]
+[connection signal="button_pressed" from="Player/RightHandController" to="Player/RightHandController" method="_on_button_pressed_feedback"]

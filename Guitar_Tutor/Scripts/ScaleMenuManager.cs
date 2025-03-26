@@ -9,7 +9,7 @@ public partial class ScaleMenuManager : CanvasLayer
     private OptionButton _positionButton;
 
     // References to needed nodes
-    private ScaleHighlighter _scaleHighlighter;
+    //private ScaleHighlighter _scaleHighlighter;
     private PatternHighlighter _patternHighlighter;
     private ScaleLibrary _scaleLibrary;
     private PositionLockDetector _positionLockDetector;
@@ -28,8 +28,8 @@ public partial class ScaleMenuManager : CanvasLayer
     };
 
     // Export variables for node paths
-    [Export]
-    private NodePath _scaleHighlighterPath = "../../../../FretBoard/ScaleHighlighter";
+    //[Export]
+   // private NodePath _scaleHighlighterPath = "../../../../FretBoard/ScaleHighlighter";
     [Export]
     private NodePath _patternHighlighterPath = "../../../../FretBoard/PatternHighlighter";
     [Export]
@@ -37,7 +37,7 @@ public partial class ScaleMenuManager : CanvasLayer
     [Export]
     private NodePath _positionLockDetectorPath = "../../../../FretBoard/PositionLockDetector";
 
-    // Added flag to track initialization status
+    // Flag to track initialization status
     private bool _isInitialized = false;
 
     public override void _Ready()
@@ -48,7 +48,7 @@ public partial class ScaleMenuManager : CanvasLayer
         _positionButton = GetNode<OptionButton>("ScaleMenu/ColorRect/MarginContainer5/position_button");
 
         // Get references to required nodes
-        _scaleHighlighter = GetNode<ScaleHighlighter>(_scaleHighlighterPath);
+        //_scaleHighlighter = GetNode<ScaleHighlighter>(_scaleHighlighterPath);
         _patternHighlighter = GetNode<PatternHighlighter>(_patternHighlighterPath);
         _scaleLibrary = GetNode<ScaleLibrary>(_scaleLibraryPath);
         _positionLockDetector = GetNode<PositionLockDetector>(_positionLockDetectorPath);
@@ -57,7 +57,7 @@ public partial class ScaleMenuManager : CanvasLayer
         GD.Print($"Note button found: {_noteButton != null}");
         GD.Print($"Scale button found: {_scaleButton != null}");
         GD.Print($"Position button found: {_positionButton != null}");
-        GD.Print($"ScaleHighlighter found: {_scaleHighlighter != null}");
+        //GD.Print($"ScaleHighlighter found: {_scaleHighlighter != null}");
         GD.Print($"PatternHighlighter found: {_patternHighlighter != null}");
         GD.Print($"ScaleLibrary found: {_scaleLibrary != null}");
         GD.Print($"PositionLockDetector found: {_positionLockDetector != null}");
@@ -114,7 +114,7 @@ public partial class ScaleMenuManager : CanvasLayer
             _positionButton.Selected = 0; // First pattern (index 0)
         }
 
-        // We'll initialize scales in a deferred call
+        // Initialize scales in a deferred call
         CallDeferred(nameof(InitializeScalesDropdown));
     }
 
@@ -154,7 +154,7 @@ public partial class ScaleMenuManager : CanvasLayer
             _scaleButton.Selected = 0; // Major
             GD.Print($"Selected scale: {_scaleButton.GetItemText(_scaleButton.Selected)}");
 
-            // Now that we have scales, we can set initialized flag
+            // initialized flag
             _isInitialized = true;
 
             // Perform initial highlighting with pattern
@@ -244,8 +244,12 @@ public partial class ScaleMenuManager : CanvasLayer
             _patternHighlighter.HighlightPatternScale(selectedNote, selectedScale);
 
             // Store the current scale info in the global scene for other components
-            GetNode<Node>("/root/Scale_main").Set("current_root_note", selectedNote);
-            GetNode<Node>("/root/Scale_main").Set("current_scale_type", selectedScale);
+            if (_scaleLibrary != null)
+            {
+                _scaleLibrary.CurrentRootNote = selectedNote;
+                _scaleLibrary.CurrentScaleType = selectedScale;
+                GD.Print($"Updated ScaleLibrary to: {selectedNote} {selectedScale}");
+            }
         }
         else
         {

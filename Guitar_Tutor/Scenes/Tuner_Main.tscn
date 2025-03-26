@@ -32,4 +32,4 @@ viewport_size = Vector2(640, 640)
 scene_properties_keys = PackedStringArray()
 
 [node name="Tuner" parent="Camera_Follow" instance=ExtResource("3_anwo8")]
-transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, -938.758, 1417.09)
+transform = Transform3D(-200, 0, -1.74846e-05, 0, 200, 0, 1.74846e-05, 0, -200, 0, -938.758, 1417.09)

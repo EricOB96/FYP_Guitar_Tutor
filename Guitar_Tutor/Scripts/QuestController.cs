@@ -10,20 +10,28 @@ public partial class QuestController : Node
     [Export]
     private NodePath _pauseMenuPath = "../../../Camera_Follow/PauseMenu";
 
+    [Export]
+    private NodePath _FeedbackPath = "../../../Camera_Follow/Feedback";
     // ScaleMenu node reference
     private Node _scaleMenuFollow;
 
     // PauseMenu Reference
     private Node _pauseMenu;
 
+    // Feedback Reference
+    private Node _feedback;
+
     public override void _Ready()
     {
-        
+
         // Get the ScaleMenu node
         _scaleMenuFollow = GetNode(_scaleMenuFollowPath);
 
         // Get the PauseMenu node
         _pauseMenu = GetNode(_pauseMenuPath);
+
+        // Get the Feedback node
+        _feedback = GetNode(_FeedbackPath);
 
         // Debug
         if (_scaleMenuFollow != null)
@@ -42,6 +50,15 @@ public partial class QuestController : Node
         else
         {
             GD.PushError($"Failed to find PauseMenu at path: {_pauseMenuPath}");
+        }
+
+        if (_feedback != null)
+        {
+            GD.Print($"Found PauseMenu node: {_feedback.Name}");
+        }
+        else
+        {
+            GD.PushError($"Failed to find PauseMenu at path: {_FeedbackPath}");
         }
     }
 
@@ -68,6 +85,17 @@ public partial class QuestController : Node
         }
     }
 
+    // Signal for toggling feeback
+    private void _on_button_pressed_feedback(StringName button)
+    {
+        GD.Print($"Button Pressed: {button}"); // Debug
+
+        if (button == "by_button")
+        {
+            ToggleFeedback();
+        }
+    }
+
     // Check if scale menu is visible
     public void ToggleScaleMenu()
     {
@@ -79,6 +107,7 @@ public partial class QuestController : Node
         }
     }
 
+
     // Check if pause menu is visible
     public void TogglePauseMenu()
     {
@@ -89,4 +118,16 @@ public partial class QuestController : Node
             GD.Print($"PauseMenu visibility toggled to: {!isVisible}");
         }
     }
+
+    // Check if feedback is visible
+    public void ToggleFeedback()
+    {
+        if (_feedback != null)
+        {
+            bool isVisible = (bool)_feedback.Call("is_visible");
+            _feedback.Call("set_visible", !isVisible);
+            GD.Print($"Feedback visibility toggled to: {!isVisible}");
+        }
+    }
+
 }
