@@ -46,7 +46,7 @@ visible = false
 screen_size = Vector2(1024, 768)
 scene = ExtResource("8_3go61")
 viewport_size = Vector2(640, 640)
-scene_properties_keys = PackedStringArray("PauseMenu")
+scene_properties_keys = PackedStringArray()
 
 [node name="ScaleMenu" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

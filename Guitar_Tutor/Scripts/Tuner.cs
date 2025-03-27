@@ -9,9 +9,9 @@ using System.Linq;
 public partial class Tuner : Node
 {
 	// UI Elements
-	[Export] private NodePath _pitchDisplayPath = "Display/PitchLabel";
-	[Export] private NodePath _noteDisplayPath = "Display/NoteLabel";
-	[Export] private NodePath _tuningIndicatorPath = "Display/TuningIndicator";
+	[Export] private NodePath _pitchDisplayPath = "Tuner/Display/PitchLabel";
+	[Export] private NodePath _noteDisplayPath = "Tuner/Display/NoteLabel";
+	[Export] private NodePath _tuningIndicatorPath = "Tuner/Display/TuningIndicator";
 
 	private Label3D _pitchDisplay;      // Displays frequency in Hz
 	private Label3D _noteDisplay;       // Displays note name
@@ -119,7 +119,7 @@ public partial class Tuner : Node
 			{
 				float pitch = _yinDetector.GetLastPitch();
 				float confidence = _yinDetector.GetConfidence();
-				GD.Print($"Debug - Pitch: {pitch:F1} Hz, Confidence: {confidence:F2}, Threshold: {_detectionThreshold}");
+				//GD.Print($"Debug - Pitch: {pitch:F1} Hz, Confidence: {confidence:F2}, Threshold: {_detectionThreshold}");
 			}
 		};
 	}

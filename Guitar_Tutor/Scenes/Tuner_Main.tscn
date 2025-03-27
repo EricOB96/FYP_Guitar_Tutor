@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://detq74pcpna7y"]
+[gd_scene load_steps=11 format=3 uid="uid://detq74pcpna7y"]
 
 [ext_resource type="Script" uid="uid://wijdhip6dxic" path="res://Guitar_Tutor/Scripts/XR_setup.gd" id="1_fhfes"]
 [ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="2_k2j77"]
@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="4_kpu03"]
 [ext_resource type="PackedScene" uid="uid://beehevhvlyd41" path="res://Guitar_Tutor/Scenes/PauseMenu.tscn" id="5_vqlox"]
 [ext_resource type="Script" uid="uid://bei1hayt0xoya" path="res://Guitar_Tutor/Scripts/AudioSetup.cs" id="6_kpu03"]
+[ext_resource type="Script" uid="uid://b3lmvcejhx7cw" path="res://Guitar_Tutor/Scripts/Tuner.cs" id="7_g15b4"]
 [ext_resource type="Script" uid="uid://dkac5ssryo7o2" path="res://Guitar_Tutor/Scripts/YinPitchDetector.cs" id="7_vqlox"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_g15b4"]
 
 [node name="Tuner_main" type="Node3D"]
 script = ExtResource("1_fhfes")
@@ -30,10 +33,11 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30.196
 screen_size = Vector2(1024, 768)
 scene = ExtResource("5_vqlox")
 viewport_size = Vector2(640, 640)
-scene_properties_keys = PackedStringArray("PauseMenu")
+scene_properties_keys = PackedStringArray()
 
 [node name="Tuner" parent="Camera_Follow" instance=ExtResource("3_anwo8")]
-transform = Transform3D(-200, 0, -1.74846e-05, 0, 200, 0, 1.74846e-05, 0, -200, 0, -938.758, -968.285)
+transform = Transform3D(-200, 0, -1.74846e-05, 0, 200, 0, 1.74846e-05, 0, -200, 0, -234.484, 237.858)
+script = ExtResource("7_g15b4")
 _yinDetectorPath = NodePath("../../PitchDetector")
 _displayDuration = 3.0
 
@@ -44,3 +48,8 @@ _debugMode = false
 
 [node name="PitchDetector" type="Node3D" parent="."]
 script = ExtResource("7_vqlox")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_g15b4")
+autoplay = true
+bus = &"Capture"
