@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7p6xcdb5sucn"]
+
+[ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_0f1mn"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_e5tdw"]
+[ext_resource type="PackedScene" uid="uid://b3dvr8lcsugwt" path="res://Guitar_Tutor/Scenes/Help_ui.tscn" id="2_hsnje"]
+[ext_resource type="Script" uid="uid://ci400no5mtjhf" path="res://Guitar_Tutor/Scripts/CameraFollow.cs" id="2_rb8hg"]
+
+[node name="HelpMain" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0f1mn")]
+
+[node name="Camera_Follow" type="Node3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
+script = ExtResource("2_rb8hg")
+_distanceFromCamera = 1.0
+_positionOffset = Vector3(0, 0, 0)
+
+[node name="HelpMenu" parent="Camera_Follow" instance=ExtResource("1_e5tdw")]
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0.0012494, -97.5506, 127.42)
+screen_size = Vector2(1050, 768)
+scene = ExtResource("2_hsnje")
+viewport_size = Vector2(1500, 768)
+unshaded = true
+scene_properties_keys = PackedStringArray()
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.970365, 0.184104, 0.156516, -0.239572, 0.648326, 0.722689, 0.0315766, -0.738769, 0.673219, -0.655689, 0.79065, 0)
+light_volumetric_fog_energy = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 12.313
+omni_range = 4096.0

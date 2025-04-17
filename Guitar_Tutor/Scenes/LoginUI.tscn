@@ -1,0 +1,167 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj3xg1ydg33v1"]
+
+[ext_resource type="FontFile" uid="uid://ccsio7tagaqx" path="res://Guitar_Tutor/Assets/Fonts/Bullpen3D.ttf" id="1_eh3wd"]
+[ext_resource type="FontFile" uid="uid://0ks1cxh8joht" path="res://Guitar_Tutor/Assets/Fonts/ALBA____.TTF" id="2_5wjhg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t714a"]
+font = ExtResource("2_5wjhg")
+font_size = 64
+font_color = Color(0.807843, 0.627451, 0.0313726, 1)
+outline_size = 10
+outline_color = Color(0.027451, 0.0823529, 0.0431373, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.529412)
+shadow_offset = Vector2(2, 2)
+
+[node name="LoginUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+anchor_bottom = 1.0
+offset_right = -0.340088
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 1, 1, 0.537255)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.163
+anchor_right = 0.862
+anchor_bottom = 0.156
+offset_left = -0.337006
+offset_top = 4.0
+offset_right = -0.138062
+offset_bottom = -0.0279999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("1_eh3wd")
+text = "Guitar Tutor"
+label_settings = SubResource("LabelSettings_t714a")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.163
+anchor_top = 0.147
+anchor_right = 0.862
+anchor_bottom = 0.289
+offset_left = -0.31662
+offset_top = -0.161003
+offset_right = 0.374634
+offset_bottom = -0.122894
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="ColorRect/MarginContainer2"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("1_eh3wd")
+text = "Register/Sign IN"
+label_settings = SubResource("LabelSettings_t714a")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.296
+anchor_right = 0.943
+anchor_bottom = 0.903
+offset_left = 0.68338
+offset_top = 0.162872
+offset_right = -0.546753
+offset_bottom = -0.246399
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer3"]
+layout_mode = 2
+
+[node name="Email" type="Label" parent="ColorRect/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("1_eh3wd")
+text = "Email"
+label_settings = SubResource("LabelSettings_t714a")
+vertical_alignment = 1
+uppercase = true
+
+[node name="EmailBtn" type="LineEdit" parent="ColorRect/MarginContainer3/VBoxContainer/Email"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.304
+anchor_right = 1.042
+anchor_bottom = 0.861
+offset_left = 0.389984
+offset_right = -0.30603
+offset_bottom = 0.0389938
+
+[node name="Password" type="Label" parent="ColorRect/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("1_eh3wd")
+text = "PASSWORD"
+label_settings = SubResource("LabelSettings_t714a")
+vertical_alignment = 1
+uppercase = true
+
+[node name="PasswordBtn" type="LineEdit" parent="ColorRect/MarginContainer3/VBoxContainer/Password"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308
+anchor_right = 1.048
+anchor_bottom = 0.861
+offset_left = -0.324036
+offset_right = 0.455933
+offset_bottom = 0.0389938
+secret = true
+
+[node name="RegisterBtn" type="Button" parent="ColorRect"]
+layout_mode = 2
+anchor_left = 0.336
+anchor_top = 0.625
+anchor_right = 0.584
+anchor_bottom = 0.718
+offset_left = 0.399963
+offset_top = 0.125
+offset_right = 0.599915
+offset_bottom = 0.165955
+theme_override_fonts/font = ExtResource("2_5wjhg")
+theme_override_font_sizes/font_size = 32
+text = "REGISTER"
+
+[node name="SignInBtn" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.618
+anchor_top = 0.625
+anchor_right = 0.866
+anchor_bottom = 0.718
+offset_left = 0.199951
+offset_top = 0.125
+offset_right = 0.399902
+offset_bottom = 0.165955
+theme_override_fonts/font = ExtResource("2_5wjhg")
+theme_override_font_sizes/font_size = 32
+text = "SIGN IN"

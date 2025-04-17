@@ -1,0 +1,162 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmfjpppt7fhxy"]
+
+[ext_resource type="Script" uid="uid://bynfjocg3whbk" path="res://Guitar_Tutor/Scripts/ScaleMenuManager.cs" id="1_errmg"]
+
+[node name="ScaleMenu_UI" type="CanvasLayer"]
+script = ExtResource("1_errmg")
+
+[node name="ScaleMenu" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.242
+offset_right = 4.0
+offset_bottom = 489.184
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ScaleMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.923
+anchor_bottom = 0.495
+offset_right = 0.0119629
+offset_bottom = 0.22998
+color = Color(0.227451, 1, 1, 0.537255)
+
+[node name="MarginContainer" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.981
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 56.0
+offset_right = -766.727
+offset_bottom = -205.0
+
+[node name="note_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer"]
+layout_mode = 2
+item_count = 12
+popup/item_0/text = "C"
+popup/item_0/id = 0
+popup/item_1/text = "C#"
+popup/item_1/id = 1
+popup/item_2/text = "D"
+popup/item_2/id = 2
+popup/item_3/text = "D#"
+popup/item_3/id = 3
+popup/item_4/text = "E"
+popup/item_4/id = 4
+popup/item_5/text = "F"
+popup/item_5/id = 5
+popup/item_6/text = "F#"
+popup/item_6/id = 6
+popup/item_7/text = "G"
+popup/item_7/id = 7
+popup/item_8/text = "G#"
+popup/item_8/id = 8
+popup/item_9/text = "A"
+popup/item_9/id = 9
+popup/item_10/text = "A#"
+popup/item_10/id = 10
+popup/item_11/text = "B"
+popup/item_11/id = 11
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.944
+anchor_bottom = 1.0
+offset_left = 346.0
+offset_top = 56.0
+offset_right = -0.247986
+offset_bottom = -205.0
+
+[node name="scale_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer2"]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Major"
+popup/item_0/id = 0
+popup/item_1/text = "Minor"
+popup/item_1/id = 1
+popup/item_2/text = "Pentatonic Major"
+popup/item_2/id = 2
+popup/item_3/text = "Pentatonic Minor"
+popup/item_3/id = 3
+
+[node name="MarginContainer5" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.944
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 155.0
+offset_right = -729.248
+offset_bottom = -107.0
+
+[node name="position_button" type="OptionButton" parent="ScaleMenu/ColorRect/MarginContainer5"]
+layout_mode = 2
+selected = 0
+item_count = 5
+popup/item_0/text = "1st"
+popup/item_0/id = 0
+popup/item_1/text = "2nd"
+popup/item_1/id = 1
+popup/item_2/text = "3rd"
+popup/item_2/id = 2
+popup/item_3/text = "4th"
+popup/item_3/id = 3
+popup/item_4/text = "5th"
+popup/item_4/id = 4
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 20.0
+offset_right = -966.0
+offset_bottom = -262.0
+
+[node name="NoteLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer3"]
+layout_mode = 2
+text = "NOTE"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 330.0
+offset_top = 19.0
+offset_right = -616.0
+offset_bottom = -269.0
+
+[node name="ScaleLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer4"]
+layout_mode = 2
+text = "SCALE"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MarginContainer6" type="MarginContainer" parent="ScaleMenu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 118.0
+offset_right = -938.0
+offset_bottom = -170.0
+
+[node name="ScaleLabel" type="Label" parent="ScaleMenu/ColorRect/MarginContainer6"]
+layout_mode = 2
+text = "PATTERN"
+horizontal_alignment = 1
+uppercase = true
+
+[connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer/note_button" to="." method="_on_note_button_item_selected"]
+[connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer2/scale_button" to="." method="_on_scale_button_item_selected"]
+[connection signal="item_selected" from="ScaleMenu/ColorRect/MarginContainer5/position_button" to="." method="_on_position_button_item_selected"]

@@ -1,64 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5v7ffrfvn1qd"]
+[gd_scene load_steps=2 format=3 uid="uid://b5v7ffrfvn1qd"]
 
-[ext_resource type="Script" path="res://Guitar_Tutor/Scripts/tuner.gd" id="1_516b5"]
-[ext_resource type="Material" uid="uid://du7la4b3s8h0o" path="res://Guitar_Tutor/Assets/Material/Green.tres" id="2_5e3is"]
 [ext_resource type="PackedScene" uid="uid://b60n7jt2o1ipu" path="res://Guitar_Tutor/Assets/Models/Tuner.glb" id="2_uj51p"]
 
-[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_7too2"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_8dfxs"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_i41o0"]
-
-[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_rvymb"]
-
 [node name="Tuner" type="Node3D"]
-script = ExtResource("1_516b5")
 
-[node name="Display" parent="." instance=ExtResource("2_uj51p")]
+[node name="Tuner" parent="." instance=ExtResource("2_uj51p")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
-[node name="NoteLabel" type="Label3D" parent="Display"]
+[node name="Display" type="Node3D" parent="Tuner"]
+
+[node name="NoteLabel" type="Label3D" parent="Tuner/Display"]
 transform = Transform3D(1, 0, 0, 0, 0.0482397, 0.998836, 0, -0.998836, 0.0482397, 0, 0.318469, -0.338357)
 text = "E2"
 font_size = 55
 
-[node name="StartButton" type="MeshInstance3D" parent="Display"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.00714648, 0.416731, 0.189642)
-mesh = SubResource("PlaceholderMesh_7too2")
-skeleton = NodePath("")
-
-[node name="Area3D" type="Area3D" parent="Display/StartButton"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Display/StartButton/Area3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0763389, -0.11367)
-shape = SubResource("SphereShape3D_8dfxs")
-
-[node name="StartLabel" type="Label3D" parent="Display/StartButton"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.172422, -0.106115)
-text = "Start"
-
-[node name="PitchLabel" type="Label3D" parent="Display"]
+[node name="PitchLabel" type="Label3D" parent="Tuner/Display"]
 transform = Transform3D(1, 0, 0, 0, 0.0438636, 0.999038, 0, -0.999038, 0.0438636, -0.720444, 0.332705, -0.0675231)
 text = "Hz:-"
 font_size = 38
 
-[node name="LowIndicator" type="MeshInstance3D" parent="Display"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.584, 0.359, -0.28)
-mesh = SubResource("PrismMesh_i41o0")
-surface_material_override/0 = ExtResource("2_5e3is")
-
-[node name="HighIndicator" type="MeshInstance3D" parent="Display"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.576633, 0.394923, -0.279554)
-mesh = SubResource("PrismMesh_i41o0")
-skeleton = NodePath("../LowIndicator")
-surface_material_override/0 = ExtResource("2_5e3is")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Display"]
-stream = SubResource("AudioStreamMicrophone_rvymb")
-autoplay = true
-bus = &"Capture"
-
-[node name="TuningIndicator" type="Label3D" parent="Display"]
+[node name="TuningIndicator" type="Label3D" parent="Tuner/Display"]
 transform = Transform3D(1, 0, 0, 0, 0.00167544, 0.999999, 0, -0.999999, 0.00167544, 0.350699, 0.311339, -0.0248237)
 text = "Cents:-"

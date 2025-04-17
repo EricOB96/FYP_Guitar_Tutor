@@ -1,0 +1,19 @@
+
+{
+  "profiles": {
+	"Godot Debug": {
+	  "commandName": "Executable",
+	  "executablePath": "C:/Users/erico/OneDrive/Desktop/Godot_v4.4-stable_mono_win64/Godot_v4.4-stable_mono_win64.exe",
+	  "commandLineArgs": "--path . --verbose",
+	  "workingDirectory": ".",
+	  "nativeDebugging": true
+	},
+	"Godot Debug TestYinPitchDetection": {
+	  "commandName": "Executable",
+	  "executablePath": "C:/Users/erico/OneDrive/Desktop/Godot_v4.4-stable_mono_win64/Godot_v4.4-stable_mono_win64.exe",
+	  "commandLineArgs": "--upwards ./Guitar_Tutor/Test/Test_YinPitchDetection.tscn --verbose",
+	  "workingDirectory": ".",
+	  "nativeDebugging": true
+	}
+  }
+}

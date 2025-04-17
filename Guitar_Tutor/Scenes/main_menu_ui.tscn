@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmkd1yao18qhf"]
+
+[ext_resource type="Script" uid="uid://crkkssjlxc27x" path="res://Guitar_Tutor/Scripts/SceneManager.cs" id="1_2jb5f"]
+[ext_resource type="FontFile" uid="uid://ccsio7tagaqx" path="res://Guitar_Tutor/Assets/Fonts/Bullpen3D.ttf" id="2_418pr"]
+[ext_resource type="FontFile" uid="uid://0ks1cxh8joht" path="res://Guitar_Tutor/Assets/Fonts/ALBA____.TTF" id="3_1pw2x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0c58b"]
+font = ExtResource("3_1pw2x")
+font_size = 64
+font_color = Color(0.807843, 0.627451, 0.0313726, 1)
+outline_size = 10
+outline_color = Color(0.027451, 0.0823529, 0.0431373, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.529412)
+shadow_offset = Vector2(2, 2)
+
+[node name="MainMenu_UI" type="CanvasLayer"]
+script = ExtResource("1_2jb5f")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.998
+anchor_bottom = 1.0
+offset_right = 0.303955
+offset_bottom = -1.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 1, 1, 0.537255)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 239.0
+offset_top = 103.0
+offset_right = -212.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Title" type="Label" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("2_418pr")
+text = "GUITAR TUTOR"
+label_settings = SubResource("LabelSettings_0c58b")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tuner_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_1pw2x")
+theme_override_font_sizes/font_size = 32
+text = "TUNER"
+
+[node name="Scale_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_1pw2x")
+theme_override_font_sizes/font_size = 32
+text = "SCALES"
+
+[node name="Help_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_1pw2x")
+theme_override_font_sizes/font_size = 32
+text = "HELP"
+
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button" to="." method="_on_tuner_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Scale_button" to="." method="_on_scale_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Help_button" to="." method="OnHelpButtonPressed"]

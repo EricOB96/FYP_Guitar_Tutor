@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://d3vn1sp57iq3d"]
+
+[ext_resource type="PackedScene" uid="uid://da7aipicgamhq" path="res://Guitar_Tutor/Scenes/Player.tscn" id="1_r80h3"]
+[ext_resource type="PackedScene" uid="uid://cv0bpodvixyjo" path="res://Guitar_Tutor/Scenes/fret_board.tscn" id="2_64xvu"]
+[ext_resource type="Script" uid="uid://bp3ef8aupfmg0" path="res://Guitar_Tutor/Scripts/PatternHighlighter.cs" id="3_53apj"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_ec60m"]
+[ext_resource type="PackedScene" uid="uid://bmfjpppt7fhxy" path="res://Guitar_Tutor/Scenes/Scale_Menu.tscn" id="4_46dqx"]
+[ext_resource type="Script" uid="uid://3u5vklky0bv4" path="res://Guitar_Tutor/Scripts/PositionLockDetector.cs" id="4_53apj"]
+[ext_resource type="Script" uid="uid://ci400no5mtjhf" path="res://Guitar_Tutor/Scripts/CameraFollow.cs" id="4_xwb3j"]
+[ext_resource type="Script" uid="uid://bbp11lrqdirjs" path="res://Guitar_Tutor/Scripts/ScaleLibrary.cs" id="6_u2ifm"]
+[ext_resource type="PackedScene" uid="uid://beehevhvlyd41" path="res://Guitar_Tutor/Scenes/PauseMenu.tscn" id="8_3go61"]
+[ext_resource type="PackedScene" uid="uid://dmvun4rhib7yj" path="res://Guitar_Tutor/Scenes/Feedback_Menu.tscn" id="9_0h0dh"]
+[ext_resource type="Script" uid="uid://baaeh0ndjy7wa" path="res://Guitar_Tutor/Scripts/FeedbackSystem.cs" id="13_3vw7q"]
+[ext_resource type="AudioStream" uid="uid://cctehs3vt8o4o" path="res://Guitar_Tutor/Assets/Audio/correct-note.mp3" id="14_46a08"]
+[ext_resource type="AudioStream" uid="uid://comr4ks1gxij5" path="res://Guitar_Tutor/Assets/Audio/correct-scale.mp3" id="15_g45ju"]
+
+[node name="Scale_main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_r80h3")]
+
+[node name="FretBoard" parent="." instance=ExtResource("2_64xvu")]
+transform = Transform3D(-4.37114e-08, 0, -1, -0.985184, 0.171499, 4.30638e-08, 0.171499, 0.985184, -7.49647e-09, 0, 0.836815, -0.931861)
+
+[node name="PatternHighlighter" type="Node3D" parent="FretBoard"]
+script = ExtResource("3_53apj")
+
+[node name="PositionLockDetector" type="Node3D" parent="FretBoard"]
+script = ExtResource("4_53apj")
+_patternHighlighterPath = NodePath("../PatternHighlighter")
+_confidenceThreshold = 0.88
+_highlightDuration = 2.5
+
+[node name="Camera_Follow" type="Node3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
+script = ExtResource("4_xwb3j")
+_distanceFromCamera = 1.0
+_positionOffset = Vector3(0, 0, 0)
+
+[node name="PauseMenu" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30.1963, 0, -181.979)
+visible = false
+screen_size = Vector2(1024, 768)
+scene = ExtResource("8_3go61")
+viewport_size = Vector2(640, 640)
+unshaded = true
+scene_properties_keys = PackedStringArray()
+
+[node name="ScaleMenu" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -258.254, -153.9)
+screen_size = Vector2(768, 360)
+scene = ExtResource("4_46dqx")
+viewport_size = Vector2(1000, 360)
+unshaded = true
+scene_properties_keys = PackedStringArray("ScaleMenuManager", "_patternHighlighterPath", "_scaleLibraryPath", "_positionLockDetectorPath")
+_patternHighlighterPath = NodePath("")
+_scaleLibraryPath = NodePath("../../ScaleLibrary")
+_positionLockDetectorPath = NodePath("")
+
+[node name="Feedback" parent="Camera_Follow" instance=ExtResource("3_ec60m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.353, 68.6318, -153.992)
+screen_size = Vector2(1400, 420)
+scene = ExtResource("9_0h0dh")
+viewport_size = Vector2(768, 360)
+unshaded = true
+scene_properties_keys = PackedStringArray()
+
+[node name="ScaleLibrary" type="Node3D" parent="."]
+script = ExtResource("6_u2ifm")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 12.0
+light_indirect_energy = 9.566
+light_volumetric_fog_energy = 0.0
+omni_range = 2.741
+
+[node name="FeedbackSystem" type="Node3D" parent="."]
+script = ExtResource("13_3vw7q")
+_correctNoteSound = ExtResource("14_46a08")
+_completeScaleSound = ExtResource("15_g45ju")
+_patternHighlighterPath = NodePath("../FretBoard/PatternHighlighter")
+_detectionThreshold = 0.87
+_displayDuration = 2.0
+_patternModeActive = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999914, -0.00168287, 0.0130337, -0.0101897, 0.527039, 0.84978, -0.00829932, -0.84984, 0.526976, 0, 0.830377, 0.18729)
+directional_shadow_mode = 0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.754274, 0.656559, 0, -0.656559, -0.754274, 0, 1.25306, -0.824716)

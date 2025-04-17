@@ -11,20 +11,28 @@ config_version=5
 [application]
 
 config/name="Guitar_tutor"
-run/main_scene="res://Guitar_Tutor/Scenes/Main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://dawiofb726y72"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="res://Guitar_Tutor/Capture_bus.tres"
 driver/enable_input=true
-driver/mix_rate=48000
 
 [autoload]
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
 XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+AudioCapture="*res://Guitar_Tutor/Scenes/AudioCapture.tscn"
+AudioManager="*res://Guitar_Tutor/Scripts/AudioManager.cs"
+YinPitchDetector="*res://Guitar_Tutor/Scripts/YinPitchDetector.cs"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=768
+window/size/transparent=true
 
 [dotnet]
 
@@ -32,19 +40,40 @@ project/assembly_name="Guitar_tutor"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg", "res://addons/gdUnit4/plugin.cfg")
+
+[input]
+
+AX_button={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+menu_button={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+by_button={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+]
+}
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+viewport/transparent_background=true
 vrs/mode=2
 
 [xr]
 
 openxr/enabled=true
 openxr/environment_blend_mode=2
-openxr/foveation_level=1
+openxr/foveation_level=3
 openxr/foveation_dynamic=true
 openxr/submit_depth_buffer=true
 shaders/enabled=true

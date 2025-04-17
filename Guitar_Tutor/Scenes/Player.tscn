@@ -1,19 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://da7aipicgamhq"]
+[gd_scene load_steps=7 format=3 uid="uid://da7aipicgamhq"]
 
-[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="1_d40gw"]
-[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="2_21aqw"]
+[ext_resource type="Script" uid="uid://5d0mup1sujte" path="res://Guitar_Tutor/Scripts/XRSetup.cs" id="1_matfq"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_ti1na"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="3_b3w6e"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="4_8sjy8"]
+[ext_resource type="Script" uid="uid://cevyf5r6mfbcw" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="4_matfq"]
+[ext_resource type="Script" uid="uid://b83dyubdea8jl" path="res://Guitar_Tutor/Scripts/QuestController.cs" id="6_xhen4"]
 
-[node name="Player" type="XROrigin3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="Player" type="Node3D"]
+script = ExtResource("1_matfq")
 
-[node name="XRCamera3D" type="XRCamera3D" parent="."]
+[node name="Player" type="XROrigin3D" parent="."]
 
-[node name="LeftHandController" type="XRController3D" parent="."]
+[node name="XRCamera3D" type="XRCamera3D" parent="Player"]
+
+[node name="LeftHandController" type="XRController3D" parent="Player"]
 tracker = &"left_hand"
+script = ExtResource("6_xhen4")
 
-[node name="LeftHand" parent="LeftHandController" instance=ExtResource("1_d40gw")]
+[node name="LeftHand" parent="Player/LeftHandController" instance=ExtResource("2_ti1na")]
 
-[node name="RightHandController" type="XRController3D" parent="."]
+[node name="FunctionPointer" parent="Player/LeftHandController" instance=ExtResource("3_b3w6e")]
+show_laser = 0
+laser_length = 1
+show_target = true
+target_radius = 0.005
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="Player/LeftHandController"]
+script = ExtResource("4_matfq")
+metadata/_custom_type_script = "uid://cevyf5r6mfbcw"
+
+[node name="RightHandController" type="XRController3D" parent="Player"]
 tracker = &"right_hand"
+script = ExtResource("6_xhen4")
 
-[node name="RightHand" parent="RightHandController" instance=ExtResource("2_21aqw")]
+[node name="RightHand" parent="Player/RightHandController" instance=ExtResource("4_8sjy8")]
+
+[node name="FunctionPointer" parent="Player/RightHandController" instance=ExtResource("3_b3w6e")]
+show_laser = 0
+laser_length = 1
+show_target = true
+target_radius = 0.005
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="Player/RightHandController"]
+script = ExtResource("4_matfq")
+metadata/_custom_type_script = "uid://cevyf5r6mfbcw"
+
+[node name="QuestController" type="Node3D" parent="Player"]
+
+[connection signal="button_pressed" from="Player/LeftHandController" to="Player/LeftHandController" method="_on_button_pressed_left"]
+[connection signal="button_pressed" from="Player/RightHandController" to="Player/RightHandController" method="_on_button_pressed"]
+[connection signal="button_pressed" from="Player/RightHandController" to="Player/RightHandController" method="_on_button_pressed_feedback"]
