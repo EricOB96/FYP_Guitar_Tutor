@@ -1,133 +1,153 @@
 using Godot;
 using System;
 
-public partial class QuestController : Node
+namespace GuitarTutor.Management
 {
-    // Path to Camera_Follow node
-    [Export]
-    private NodePath _scaleMenuFollowPath = "../../../Camera_Follow/ScaleMenu";
-
-    [Export]
-    private NodePath _pauseMenuPath = "../../../Camera_Follow/PauseMenu";
-
-    [Export]
-    private NodePath _FeedbackPath = "../../../Camera_Follow/Feedback";
-    // ScaleMenu node reference
-    private Node _scaleMenuFollow;
-
-    // PauseMenu Reference
-    private Node _pauseMenu;
-
-    // Feedback Reference
-    private Node _feedback;
-
-    public override void _Ready()
+    public partial class QuestController : Node
     {
+        // Path to Camera_Follow node
+        [Export]
+        private NodePath _scaleMenuFollowPath = "../../../Camera_Follow/ScaleMenu";
 
-        // Get the ScaleMenu node
-        _scaleMenuFollow = GetNode(_scaleMenuFollowPath);
+        [Export]
+        private NodePath _pauseMenuPath = "../../../Camera_Follow/PauseMenu";
 
-        // Get the PauseMenu node
-        _pauseMenu = GetNode(_pauseMenuPath);
+        [Export]
+        private NodePath _FeedbackPath = "../../../Camera_Follow/Feedback";
+        // ScaleMenu node reference
+        private Node _scaleMenuFollow;
 
-        // Get the Feedback node
-        _feedback = GetNode(_FeedbackPath);
+        // PauseMenu Reference
+        private Node _pauseMenu;
 
-        // Debug
-        if (_scaleMenuFollow != null)
+        // Feedback Reference
+        private Node _feedback;
+
+        public override void _Ready()
         {
-            GD.Print($"Found ScaleMenu node: {_scaleMenuFollow.Name}");
-        }
-        else
-        {
-            GD.PushError($"Failed to find ScaleMenu at path: {_scaleMenuFollowPath}");
+
+            // Get the ScaleMenu node
+            _scaleMenuFollow = GetNode(_scaleMenuFollowPath);
+
+            // Get the PauseMenu node
+            _pauseMenu = GetNode(_pauseMenuPath);
+
+            // Get the Feedback node
+            _feedback = GetNode(_FeedbackPath);
+
+            // Debug
+            if (_scaleMenuFollow != null)
+            {
+                GD.Print($"Found ScaleMenu node: {_scaleMenuFollow.Name}");
+            }
+            else
+            {
+                GD.PushError($"Failed to find ScaleMenu at path: {_scaleMenuFollowPath}");
+            }
+
+            if (_pauseMenu != null)
+            {
+                GD.Print($"Found PauseMenu node: {_pauseMenu.Name}");
+            }
+            else
+            {
+                GD.PushError($"Failed to find PauseMenu at path: {_pauseMenuPath}");
+            }
+
+            if (_feedback != null)
+            {
+                GD.Print($"Found PauseMenu node: {_feedback.Name}");
+            }
+            else
+            {
+                GD.PushError($"Failed to find PauseMenu at path: {_FeedbackPath}");
+            }
         }
 
-        if (_pauseMenu != null)
+        public override void _Process(double delta)
         {
-            GD.Print($"Found PauseMenu node: {_pauseMenu.Name}");
-        }
-        else
-        {
-            GD.PushError($"Failed to find PauseMenu at path: {_pauseMenuPath}");
+            // Check for Y button press (JoyButton 3)
+            if (Input.IsJoyButtonPressed(0, JoyButton.Y))
+            {
+                GD.Print("Y button pressed, reloading scene");
+                ReloadScene();
+            }
         }
 
-        if (_feedback != null)
+        // Signal for toggling scale menu
+        private void _on_button_pressed(StringName button)
         {
-            GD.Print($"Found PauseMenu node: {_feedback.Name}");
+            GD.Print($"Button Pressed: {button}"); // Debug
+
+            if (button == "ax_button")
+            {
+                ToggleScaleMenu();
+            }
         }
-        else
+
+        // Signal for toggling pause menu
+
+        private void _on_button_pressed_left(StringName button)
         {
-            GD.PushError($"Failed to find PauseMenu at path: {_FeedbackPath}");
+            GD.Print($"Button Pressed: {button}"); // Debug
+
+            if (button == "menu_button")
+            {
+                TogglePauseMenu();
+            }
         }
+
+        // Signal for toggling feeback
+        private void _on_button_pressed_feedback(StringName button)
+        {
+            GD.Print($"Button Pressed: {button}"); // Debug
+
+            if (button == "by_button")
+            {
+                ToggleFeedback();
+            }
+        }
+
+        private void ReloadScene()
+        {
+            var currentScene = GetTree().CurrentScene;
+
+            GetTree().ReloadCurrentScene();
+        }
+
+        // Check if scale menu is visible
+        public void ToggleScaleMenu()
+        {
+            if (_scaleMenuFollow != null)
+            {
+                bool isVisible = (bool)_scaleMenuFollow.Call("is_visible");
+                _scaleMenuFollow.Call("set_visible", !isVisible);
+                GD.Print($"Camera Follow visibility toggled to: {!isVisible}");
+            }
+        }
+
+
+        // Check if pause menu is visible
+        public void TogglePauseMenu()
+        {
+            if (_pauseMenu != null)
+            {
+                bool isVisible = (bool)_pauseMenu.Call("is_visible");
+                _pauseMenu.Call("set_visible", !isVisible);
+                GD.Print($"PauseMenu visibility toggled to: {!isVisible}");
+            }
+        }
+
+        // Check if feedback is visible
+        public void ToggleFeedback()
+        {
+            if (_feedback != null)
+            {
+                bool isVisible = (bool)_feedback.Call("is_visible");
+                _feedback.Call("set_visible", !isVisible);
+                GD.Print($"Feedback visibility toggled to: {!isVisible}");
+            }
+        }
+
     }
-
-    // Signal for toggling scale menu
-    private void _on_button_pressed(StringName button)
-    {
-        GD.Print($"Button Pressed: {button}"); // Debug
-
-        if (button == "ax_button")
-        {
-            ToggleScaleMenu();
-        }
-    }
-
-    // Signal for toggling pause menu
-
-    private void _on_button_pressed_left(StringName button)
-    {
-        GD.Print($"Button Pressed: {button}"); // Debug
-
-        if (button == "menu_button")
-        {
-            TogglePauseMenu();
-        }
-    }
-
-    // Signal for toggling feeback
-    private void _on_button_pressed_feedback(StringName button)
-    {
-        GD.Print($"Button Pressed: {button}"); // Debug
-
-        if (button == "by_button")
-        {
-            ToggleFeedback();
-        }
-    }
-
-    // Check if scale menu is visible
-    public void ToggleScaleMenu()
-    {
-        if (_scaleMenuFollow != null)
-        {
-            bool isVisible = (bool)_scaleMenuFollow.Call("is_visible");
-            _scaleMenuFollow.Call("set_visible", !isVisible);
-            GD.Print($"Camera Follow visibility toggled to: {!isVisible}");
-        }
-    }
-
-
-    // Check if pause menu is visible
-    public void TogglePauseMenu()
-    {
-        if (_pauseMenu != null)
-        {
-            bool isVisible = (bool)_pauseMenu.Call("is_visible");
-            _pauseMenu.Call("set_visible", !isVisible);
-            GD.Print($"PauseMenu visibility toggled to: {!isVisible}");
-        }
-    }
-
-    // Check if feedback is visible
-    public void ToggleFeedback()
-    {
-        if (_feedback != null)
-        {
-            bool isVisible = (bool)_feedback.Call("is_visible");
-            _feedback.Call("set_visible", !isVisible);
-            GD.Print($"Feedback visibility toggled to: {!isVisible}");
-        }
-    }
-
 }

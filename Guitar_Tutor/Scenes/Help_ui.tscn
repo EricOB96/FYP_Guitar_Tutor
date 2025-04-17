@@ -1,0 +1,213 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3dvr8lcsugwt"]
+
+[ext_resource type="Script" uid="uid://bffs1igvv26g8" path="res://Guitar_Tutor/Scripts/Helpmenu.cs" id="1_eerhb"]
+[ext_resource type="FontFile" uid="uid://ccsio7tagaqx" path="res://Guitar_Tutor/Assets/Fonts/Bullpen3D.ttf" id="1_h1amh"]
+[ext_resource type="FontFile" uid="uid://0ks1cxh8joht" path="res://Guitar_Tutor/Assets/Fonts/ALBA____.TTF" id="2_xbswk"]
+[ext_resource type="FontFile" uid="uid://c58uwfcbbwm21" path="res://Guitar_Tutor/Assets/Fonts/Courgette-Regular.ttf" id="3_xbswk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eerhb"]
+font = ExtResource("2_xbswk")
+font_size = 64
+font_color = Color(0.807843, 0.627451, 0.0313726, 1)
+outline_size = 10
+outline_color = Color(0.027451, 0.0823529, 0.0431373, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.529412)
+shadow_offset = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_eerhb")
+
+[node name="HelpUi" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 46.0
+offset_bottom = 50.9999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="HelpUi"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.971
+anchor_bottom = 0.932
+offset_right = 0.489746
+offset_bottom = -0.110046
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 1, 1, 0.537255)
+
+[node name="MarginContainer" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.163
+anchor_right = 0.862
+anchor_bottom = 0.156
+offset_left = -0.337006
+offset_top = 4.0
+offset_right = -0.138062
+offset_bottom = -0.0279999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="HelpUi/ColorRect/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("1_h1amh")
+text = "INSTRUCTIONS"
+label_settings = SubResource("LabelSettings_eerhb")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 0.174
+anchor_right = 0.241
+anchor_bottom = 0.325
+offset_left = 0.501
+offset_top = 0.237991
+offset_right = -0.259003
+offset_bottom = 0.0249939
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tuner_Tips" type="Label" parent="HelpUi/ColorRect/MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h1amh")
+theme_override_font_sizes/font_size = 12
+text = "Tuner Tips"
+label_settings = SubResource("LabelSettings_eerhb")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.358
+anchor_right = 0.352
+anchor_bottom = 0.668
+offset_left = -0.479002
+offset_top = -0.154022
+offset_right = -0.648071
+offset_bottom = 0.315979
+
+[node name="Label" type="Label" parent="HelpUi/ColorRect/MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.509286, 0.509286, 0.509286, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("3_xbswk")
+theme_override_font_sizes/font_size = 32
+text = "Standard: E2 A2 D3 G3 B3 E4
+(♯) - Means you are sharp so tune down
+(♭)- Means you are flat so tune up
+
+
+"
+
+[node name="MarginContainer4" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.682
+anchor_top = 0.166
+anchor_right = 0.905
+anchor_bottom = 0.299
+offset_left = -0.318054
+offset_top = 0.341995
+offset_right = -0.595093
+offset_bottom = -0.137024
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scale_Tips" type="Label" parent="HelpUi/ColorRect/MarginContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h1amh")
+theme_override_font_sizes/font_size = 12
+text = "Scale Tips"
+label_settings = SubResource("LabelSettings_eerhb")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.536
+anchor_top = 0.275
+anchor_right = 0.982
+anchor_bottom = 0.833
+offset_left = -0.46405
+offset_top = 0.175003
+offset_right = -0.0180664
+offset_bottom = 78.421
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HelpUi/ColorRect/MarginContainer5"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.419813, 0.419813, 0.419813, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("3_xbswk")
+theme_override_font_sizes/font_size = 28
+text = "Red = Root note
+Blue = Other notes of scale
+Green = Note Played
+1. Select a note and scale you wish to learn
+2. Select a pattern i.e what position of the fretboard
+3. Fretboard is Grabable and can be placed anywhere 
+you please
+* Controller Buttons *
+A = Toggle Scale Menu
+B = Toggle Feedback Menu
+Pause Button = button on Left controller with 3 lines
+
+"
+
+[node name="MarginContainer6" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.878
+anchor_right = 0.266
+anchor_bottom = 0.958
+offset_left = 0.544998
+offset_top = 0.0859985
+offset_right = 0.265991
+offset_bottom = 0.0459595
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tuner_Button" type="Button" parent="HelpUi/ColorRect/MarginContainer6"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xbswk")
+theme_override_font_sizes/font_size = 32
+text = "Tuner"
+
+[node name="MarginContainer7" type="MarginContainer" parent="HelpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.76
+anchor_top = 0.885
+anchor_right = 0.968
+anchor_bottom = 0.962
+offset_left = -0.240112
+offset_top = -0.255066
+offset_right = -0.0321045
+offset_bottom = -0.00604248
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scale_Button" type="Button" parent="HelpUi/ColorRect/MarginContainer7"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xbswk")
+theme_override_font_sizes/font_size = 32
+text = "Scales"
+
+[connection signal="pressed" from="HelpUi/ColorRect/MarginContainer6/Tuner_Button" to="." method="OnTunerButtonPressed"]
+[connection signal="pressed" from="HelpUi/ColorRect/MarginContainer7/Scale_Button" to="." method="OnScaleButtonPressed"]

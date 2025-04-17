@@ -15,7 +15,6 @@ shadow_color = Color(0, 0, 0, 0.529412)
 shadow_offset = Vector2(2, 2)
 
 [node name="MainMenu_UI" type="CanvasLayer"]
-follow_viewport_enabled = true
 script = ExtResource("1_2jb5f")
 
 [node name="Control" type="Control" parent="."]
@@ -74,7 +73,7 @@ theme_override_fonts/font = ExtResource("3_1pw2x")
 theme_override_font_sizes/font_size = 32
 text = "SCALES"
 
-[node name="Help" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Help_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_1pw2x")
@@ -83,4 +82,4 @@ text = "HELP"
 
 [connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button" to="." method="_on_tuner_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Scale_button" to="." method="_on_scale_button_pressed"]
-[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Help" to="." method="_on_chord_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Help_button" to="." method="OnHelpButtonPressed"]

@@ -1,3 +1,5 @@
+# NOT IN USE
+
 extends CanvasLayer
 
 
@@ -14,9 +16,6 @@ func mic_permission():
 	if OS.get_name() == "Android":
 		OS.request_permission("RECORD_AUDIO")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_tuner_button_pressed() -> void:

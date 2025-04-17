@@ -21,7 +21,7 @@ anchor_right = 0.923
 anchor_bottom = 0.495
 offset_right = 0.0119629
 offset_bottom = 0.22998
-color = Color(0.360784, 1, 1, 0.388235)
+color = Color(0.227451, 1, 1, 0.537255)
 
 [node name="MarginContainer" type="MarginContainer" parent="ScaleMenu/ColorRect"]
 layout_mode = 1

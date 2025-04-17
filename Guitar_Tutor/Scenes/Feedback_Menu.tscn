@@ -17,8 +17,8 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="FeedbackMenu"]
 layout_mode = 0
 offset_right = 941.0
-offset_bottom = 144.0
-color = Color(0.513726, 1, 1, 0.345098)
+offset_bottom = 250.0
+color = Color(0.227451, 1, 1, 0.537255)
 
 [node name="MarginContainer" type="MarginContainer" parent="FeedbackMenu/ColorRect"]
 layout_mode = 1
@@ -27,12 +27,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 150.0
 offset_right = -224.0
-offset_bottom = -90.0
+offset_bottom = -191.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Title" type="Label" parent="FeedbackMenu/ColorRect/MarginContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.807843, 0.627451, 0.0313726, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_xjq7g")
 theme_override_font_sizes/font_size = 32
 text = "FEEDBACK"
@@ -44,18 +47,21 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 58.0
-offset_right = -846.0
-offset_bottom = -26.0
+offset_left = 40.0
+offset_top = 17.0
+offset_right = -717.0
+offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScaleTitle" type="Label" parent="FeedbackMenu/ColorRect/MarginContainer2"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.807843, 0.627451, 0.0313726, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_xjq7g")
 theme_override_font_sizes/font_size = 32
-text = "SCale:"
+text = "Scale:"
 horizontal_alignment = 1
 uppercase = true
 
@@ -64,10 +70,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 101.0
-offset_top = 57.0
-offset_right = -214.0
-offset_bottom = -27.0
+offset_left = 184.0
+offset_top = 69.0
+offset_right = -28.0
+offset_bottom = -135.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -83,10 +89,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 659.0
-offset_top = 65.0
-offset_right = -23.0
-offset_bottom = -27.0
+offset_left = 180.0
+offset_top = 139.0
+offset_right = -650.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -102,15 +108,18 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 560.0
-offset_top = 58.0
-offset_right = -276.0
+offset_left = 72.0
+offset_top = 99.0
+offset_right = -751.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NoteTitle" type="Label" parent="FeedbackMenu/ColorRect/MarginContainer5"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.807843, 0.627451, 0.0313726, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_xjq7g")
 theme_override_font_sizes/font_size = 32
 text = "NOTE:"

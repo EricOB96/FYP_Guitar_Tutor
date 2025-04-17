@@ -42,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0157471, 0.0914502, -0.448
 shape = SubResource("BoxShape3D_dglcx")
 
 [node name="FretboardV3" parent="XRToolsPickable" instance=ExtResource("1_nxr5n")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, -0.15, 0, 0, 0)
 
 [node name="ScaleNodes" type="Node3D" parent="XRToolsPickable/FretboardV3"]
 transform = Transform3D(3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, 0)
@@ -646,7 +646,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0723538, 0.136573, 0.476952
 radius = 0.005
 
 [node name="GrabLeft" type="Marker3D" parent="XRToolsPickable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0746046, 0.0768093, 0.179369)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0824465, 0.0768093, 0.397353)
 visible = false
 script = ExtResource("3_1cgd4")
 hand_pose = SubResource("Resource_nfqk1")
@@ -654,7 +654,7 @@ editor_preview_mode = 1
 metadata/_custom_type_script = "uid://dstf7i2qe0i0d"
 
 [node name="GrabRight" type="Marker3D" parent="XRToolsPickable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0823544, 0.0789977, 0.176206)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0825168, 0.0789977, 0.39419)
 visible = false
 script = ExtResource("3_1cgd4")
 hand = 1

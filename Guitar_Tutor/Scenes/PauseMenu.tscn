@@ -73,14 +73,14 @@ theme_override_fonts/font = ExtResource("2_smtfb")
 theme_override_font_sizes/font_size = 32
 text = "SCALES"
 
-[node name="Help" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Help_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_smtfb")
 theme_override_font_sizes/font_size = 32
 text = "HELP"
 
-[node name="Exit" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Exit_button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_smtfb")
@@ -89,3 +89,5 @@ text = "EXIT"
 
 [connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Tuner_button" to="." method="OnTunerButtonPressed"]
 [connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Scale_button" to="." method="OnScaleButtonPressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Help_button" to="." method="OnHelpButtonPressed"]
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Exit_button" to="." method="OnExitButtonPressed"]

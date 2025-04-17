@@ -1,9 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5v7ffrfvn1qd"]
+[gd_scene load_steps=2 format=3 uid="uid://b5v7ffrfvn1qd"]
 
-[ext_resource type="Material" uid="uid://du7la4b3s8h0o" path="res://Guitar_Tutor/Assets/Material/Green.tres" id="2_5e3is"]
 [ext_resource type="PackedScene" uid="uid://b60n7jt2o1ipu" path="res://Guitar_Tutor/Assets/Models/Tuner.glb" id="2_uj51p"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_i41o0"]
 
 [node name="Tuner" type="Node3D"]
 
@@ -21,18 +18,6 @@ font_size = 55
 transform = Transform3D(1, 0, 0, 0, 0.0438636, 0.999038, 0, -0.999038, 0.0438636, -0.720444, 0.332705, -0.0675231)
 text = "Hz:-"
 font_size = 38
-
-[node name="LowIndicator" type="MeshInstance3D" parent="Tuner/Display"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.584, 0.359, -0.28)
-mesh = SubResource("PrismMesh_i41o0")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_5e3is")
-
-[node name="HighIndicator" type="MeshInstance3D" parent="Tuner/Display"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.576633, 0.394923, -0.279554)
-mesh = SubResource("PrismMesh_i41o0")
-skeleton = NodePath("../LowIndicator")
-surface_material_override/0 = ExtResource("2_5e3is")
 
 [node name="TuningIndicator" type="Label3D" parent="Tuner/Display"]
 transform = Transform3D(1, 0, 0, 0, 0.00167544, 0.999999, 0, -0.999999, 0.00167544, 0.350699, 0.311339, -0.0248237)

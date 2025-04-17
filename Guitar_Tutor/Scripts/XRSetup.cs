@@ -1,56 +1,59 @@
 using Godot;
 using System;
 
-public partial class XRSetup : Node
+namespace GuitarTutor.XR
 {
-    // Reference to the XRServer
-    private XRInterface xrInterface;
-
-    public override void _Ready()
+    public partial class XRSetup : Node
     {
-        // Initialize XR
-        InitializeXR();
-    }
+        // Reference to the XRServer
+        private XRInterface xrInterface;
 
-    private void InitializeXR()
-    {
-        // Get the XRServer singleton
-        xrInterface = XRServer.FindInterface("OpenXR");
-
-        if (xrInterface != null && xrInterface.IsInitialized())
+        public override void _Ready()
         {
-            GD.Print("OpenXR interface found and initialized.");
-
-            // Enable AR passthrough
-            EnableARPassthrough();
-
-            // Set the primary interface
-            XRServer.PrimaryInterface = xrInterface;
-
-            // Enable XR mode
-            GetViewport().UseXR = true;
-
-            GD.Print("XR mode enabled successfully.");
+            // Initialize XR
+            InitializeXR();
         }
-        else
-        {
-            GD.PrintErr("Failed to initialize OpenXR interface.");
-        }
-    }
 
-    private void EnableARPassthrough()
-    {
-        // Check if AR passthrough is supported
-        if (xrInterface.IsPassthroughSupported())
+        private void InitializeXR()
         {
-            // Enable AR passthrough
-            xrInterface.StartPassthrough();
+            // Get the XRServer singleton
+            xrInterface = XRServer.FindInterface("OpenXR");
 
-            GD.Print("AR passthrough enabled.");
+            if (xrInterface != null && xrInterface.IsInitialized())
+            {
+                GD.Print("OpenXR interface found and initialized.");
+
+                // Enable AR passthrough
+                EnableARPassthrough();
+
+                // Set the primary interface
+                XRServer.PrimaryInterface = xrInterface;
+
+                // Enable XR mode
+                GetViewport().UseXR = true;
+
+                GD.Print("XR mode enabled successfully.");
+            }
+            else
+            {
+                GD.PrintErr("Failed to initialize OpenXR interface.");
+            }
         }
-        else
+
+        private void EnableARPassthrough()
         {
-            GD.PrintErr("AR passthrough is not supported on this device.");
+            // Check if AR passthrough is supported
+            if (xrInterface.IsPassthroughSupported())
+            {
+                // Enable AR passthrough
+                xrInterface.StartPassthrough();
+
+                GD.Print("AR passthrough enabled.");
+            }
+            else
+            {
+                GD.PrintErr("AR passthrough is not supported on this device.");
+            }
         }
     }
 }
