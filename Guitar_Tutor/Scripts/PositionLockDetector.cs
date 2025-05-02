@@ -249,19 +249,6 @@ namespace GuitarTutor.Detection
                 return;
             }
             
-            // Get the current pattern from the pattern highlighter
-            // This assumes the pattern highlighter has a method to get the current pattern
-            // If not, we'll need to implement a different approach
-            
-            // For now, we'll use a simple approach: check if the pattern highlighter has any highlighted nodes
-            // and extract their positions
-            
-            // This is a placeholder - you'll need to implement the actual logic based on your PatternHighlighter class
-            // For example, if your PatternHighlighter has a method to get the current pattern positions:
-            // _patternPositions = _patternHighlighter.GetCurrentPatternPositions();
-            
-            // For now, we'll just log that we need to implement this
-            GD.Print("Pattern position extraction needs to be implemented based on your PatternHighlighter class");
         }
         
         /// <summary>
@@ -324,7 +311,6 @@ namespace GuitarTutor.Detection
                         float expectedFrequency = CalculateExpectedFrequency(stringNum, fret);
 
                         // Calculate a score based on how close the frequency matches
-                        // (higher is better, using negative difference to make higher = better)
                         float score = -Math.Abs(frequency - expectedFrequency);
                         
                         // Apply pattern validation if enabled
